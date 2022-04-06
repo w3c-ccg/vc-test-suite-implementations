@@ -1,0 +1,15 @@
+{
+  "name": "Transmute",
+  "implementation": "transmute",
+  "oauth2": {
+     "clientId": "CGACwnX3KuIk9bfNgb7pSAd9SZxdCAEl",
+     "clientSecret": "CLIENT_SECRET_PLATFORM_TRANSMUTE_INDUSTRIES",
+     "tokenAudience": "https://platform.transmute.industries",
+     "tokenEndpoint": "https://transmute-industries.auth0.com/oauth/token"
+  },
+  "issuer": {
+    "id": "did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd",
+    "endpoint": "https://vc.transmute.world/v0.0.0/credentials/issueCredential"
+  },
+  "verifier": "https://vc.transmute.world/next/credentials/verify"
+}
