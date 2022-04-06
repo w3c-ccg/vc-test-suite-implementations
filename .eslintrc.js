@@ -7,6 +7,10 @@ module.exports = {
   env: {
     node: true
   },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
   ignorePatterns: ['dist/'],
   rules: {
     'jsdoc/check-examples': 'off'
