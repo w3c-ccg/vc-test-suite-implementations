@@ -7,9 +7,14 @@
     "tokenAudience": "https://api-staging.producer.neoflow.energy/v1/credentials",
     "tokenEndpoint": "https://api-staging.producer.neoflow.energy/v1/auth"
   },
-  "issuer": {
+  "issuers": [{
     "id": "did:key:z6MkiTsvjrrPNDZ1rrg9QDEYCFWCmEswT6U2cEkScb7edQ9b",
-    "endpoint": "https://api.neo-flow.com/credentials/issueCredential"
-  },
-  "verifier": "https://api.neo-flow.com/verifier/credentials"
+    "endpoint": "https://api.neo-flow.com/credentials/issueCredential",
+    "tags": ["VC-HTTP-API", "OATH2"]
+  }],
+  "verifiers": [{
+    "id": "",
+    "endpoint": "https://api.neo-flow.com/verifier/credentials",
+    "tags": ["VC-HTTP-API", "OATH2"]
+  }]
 }

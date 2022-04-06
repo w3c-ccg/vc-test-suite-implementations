@@ -7,9 +7,14 @@
      "tokenAudience": "https://platform.transmute.industries",
      "tokenEndpoint": "https://transmute-industries.auth0.com/oauth/token"
   },
-  "issuer": {
+  "issuers": [{
     "id": "did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd",
-    "endpoint": "https://vc.transmute.world/v0.0.0/credentials/issueCredential"
-  },
-  "verifier": "https://vc.transmute.world/next/credentials/verify"
+    "endpoint": "https://vc.transmute.world/v0.0.0/credentials/issueCredential",
+    "tags": ["VC-HTTP-API", "OATH2"]
+  }],
+  "verifiers": [{
+    "id": "",
+    "endpoint": "https://vc.transmute.world/next/credentials/verify",
+    "tags": ["VC-HTTP-API", "OATH2"]
+  }]
 }

@@ -7,9 +7,14 @@
     "tokenAudience": "https://vc.mesur.io/",
     "tokenEndpoint": "https://mesur.auth0.com/oauth/token"
   },
-  "issuer": {
+  "issuers": [{
     "id": "did:key:z6Mki93tJ2rwrDaWTMZcdMShk4xLWf75Fu559dAapKe8pdmX",
-    "endpoint": "https://vc.mesur.io/next/credentials/issue"
-  },
-  "verifier": "https://vc.mesur.io/next/credentials/verify"
+    "endpoint": "https://vc.mesur.io/next/credentials/issue",
+    "tags": ["VC-HTTP-API", "OATH2"]
+  }],
+  "verifiers": [{
+    "id": "",
+    "endpoint": "https://vc.mesur.io/next/credentials/verify",
+    "tags": ["VC-HTTP-API", "OATH2"]
+  }]
 }
