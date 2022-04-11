@@ -18,7 +18,8 @@
   },
   "license": "BSD-3-Clause",
   "files": [
-    "lib/*.js"
+    "lib/*.js",
+    "implementations/*"
   ],
   "main": "lib/index.js",
   "module": "lib/main.js",
