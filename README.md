@@ -1,8 +1,8 @@
-# Example Isomorphic JS Lib Template _(@digitalbazaar/isomorphic-js-lib-template)_
+# VC API Test Suite Implementations _(vc-api-test-suite-implementations)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalbazaar/isomorphic-js-lib-template/Node.js%20CI)](https://github.com/digitalbazaar/isomorphic-js-lib-template/actions?query=workflow%3A%22Node.js+CI%22)
-[![Coverage status](https://img.shields.io/codecov/c/github/digitalbazaar/isomorphic-js-lib-template)](https://codecov.io/gh/digitalbazaar/isomorphic-js-lib-template)
-[![NPM Version](https://img.shields.io/npm/v/@digitalbazaar/isomorphic-js-lib-template.svg)](https://npm.im/@digitalbazaar/isomorphic-js-lib-template)
+[![Build status](https://img.shields.io/github/workflow/status/digitalbazaar/vc-api-test-suite-implementations/Node.js%20CI)](https://github.com/digitalbazaar/vc-api-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
+[![Coverage status](https://img.shields.io/codecov/c/github/digitalbazaar/vc-api-test-suite-implementations)](https://codecov.io/gh/digitalbazaar/vc-api-test-suite-implementations)
+[![NPM Version](https://img.shields.io/npm/v/@digitalbazaar/vc-api-test-suite-implementations.svg)](https://npm.im/@digitalbazaar/vc-api-test-suite-implementations)
 
 > A template skeleton repo for (non-Bedrock) JS libraries that run in Node.js and in the browser.
 
@@ -18,22 +18,22 @@
 
 ## Background
 
-TBD
+Implementations added to this package are tested against various test suites in order to demonstrate interopability.
 
 ## Security
 
-TBD
+Please do not commit any sensitive materials such as oauth2 client secret or client secrets used for signing zcaps or HTTP Signature Headers.
 
 ## Install
 
-- Node.js 12+ is required.
+- Node.js 14+ is required.
 
 ### NPM
 
 To install via NPM:
 
 ```
-npm install @digitalbazaar/isomorphic-js-lib-template
+npm install digitalbazaar/vc-api-test-suite-implementations
 ```
 
 ### Development
@@ -41,14 +41,51 @@ npm install @digitalbazaar/isomorphic-js-lib-template
 To install locally (for development):
 
 ```
-git clone https://github.com/digitalbazaar/isomorphic-js-lib-template.git
-cd isomorphic-js-lib-template
+git clone https://github.com/digitalbazaar/vc-api-test-suite-implementations.git
+cd vc-api-test-suite-implementations
 npm install
 ```
 
 ## Usage
 
-TBD
+Please add or correct implementations in the `./implementations` dir.
+Implementations are json in the following form:
+
+```js
+{
+  "name": "My Company",
+  "implementation": "My Implementation Name",
+  "oath2": {
+     "clientId": "bar",
+     "clientSecret": "CLIENT_SECRET_MY_COMPANY",
+     "tokenAudience": "https://my.product.net",
+     "tokenEndpoint": "https://my.product.auth0.net/oauth/token"
+  },
+  "issuers": [{
+    "id": "urn:uuid:my:implementation:issuer:id",
+    "endpoint": "https://my.product.net/issuers/foo/credentials/issue",
+    "method": "POST",
+    "zcap": {
+      "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:4d44084c-334e-46dc-ac23-5e26f75262b6\",\"controller\":\"did:key:zFoo\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fmy.implementation.net%2Fissuers%2Fz19wCeJafpsTzvA6hZksz7TYF\",\"invocationTarget\":\"https://my.implementation.net/issuers/z19wCeJafpsTzvA6hZksz7TYF/credentials/issue\",\"expires\":\"2022-05-29T17:26:30Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2022-02-28T17:26:30Z\",\"verificationMethod\":\"did:key:z6Mkk2x1J4jCmaHDyYRRW1NB7CzeKYbjo3boGfRiefPzZjLQ#z6Mkk2x1J4jCmaHDyYRRW1NB7CzeKYbjo3boGfRiefPzZjLQ\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fmy.implementation.net%2Fissuers%2Fz19wCeJafpsTzvA6hZksz7TYF\"],\"proofValue\":\"zBar\"}}",
+      "clientSecret": "CLIENT_SECRET_DB"
+    },
+    "tags": ["VC-HTTP-API", "ZCAP", "OAUTH2"]
+  }],
+  "verifiers": [{
+    "id": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
+    "endpoint": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+    "method": "POST",
+    "zcap": {
+      "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:41473f9f-9e44-4ac9-9ac2-c86a6f695703\",\"controller\":\"did:key:zFoo\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fmy.implementation.net%3A40443%2Fverifiers%2Fz19uokPn3b1Z4XDbQSHo7VhFR\",\"invocationTarget\":\"https://my.implementation.net/verifiers/zBar/credentials/verify\",\"expires\":\"2023-03-17T17:39:49Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2022-03-17T17:39:49Z\",\"verificationMethod\":\"did:key:zFoo#zBar\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fmy.application.net%2Fverifiers%2FzFoo\"],\"proofValue\":\"zBar\"}}",
+      "clientSecret": "CLIENT_SECRET_DB"
+    },
+    "tags": ["VC-HTTP-API", "ZCAP", "OAUTH2]
+  }]
+}
+```
+
+Please note: implementations may have security using oauth2 or zcaps, but not both.
+Implementations may also contain no security (do not add a OAUTH2 or ZCAP section in that case).
 
 ## Contribute
 
