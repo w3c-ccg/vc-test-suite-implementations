@@ -87,6 +87,13 @@ Implementations are json in the following form:
 Please note: implementations may have security using oauth2 or zcaps, but not both.
 Implementations may also contain no security (do not add a OAUTH2 or ZCAP section in that case).
 
+### Tags
+Tags tell the test suites which tests your issuer, verifiers, and status lists should be run on.
+
+VC-API - This tag will run [this test on your issuer](https://github.com/w3c-ccg/vc-api-issuer-test-suite) and [this test on your verifier.](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
+Ed25519Signature2020 - This tag will run the [Ed25519 tests](https://github.com/w3c-ccg/di-ed25519-test-suite) on either your issuer and/or verifier.
+StatusList2021 - This will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
+
 ## Contribute
 
 See [the contribute file](https://github.com/digitalbazaar/bedrock/blob/master/CONTRIBUTING.md)!
