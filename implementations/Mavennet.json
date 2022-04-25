@@ -15,6 +15,6 @@
   "verifiers": [{
     "id": "",
     "endpoint": "https://api.neo-flow.com/verifier/credentials",
-    "tags": ["OAUTH2"]
+    "tags": ["OAuth2"]
   }]
 }
