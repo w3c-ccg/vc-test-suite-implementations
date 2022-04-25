@@ -10,11 +10,11 @@
   "issuers": [{
     "id": "did:key:z6Mki93tJ2rwrDaWTMZcdMShk4xLWf75Fu559dAapKe8pdmX",
     "endpoint": "https://vc.mesur.io/next/credentials/issue",
-    "tags": ["OAUTH2"]
+    "tags": ["OAuth2"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://vc.mesur.io/next/credentials/verify",
-    "tags": ["OAUTH2"]
+    "tags": ["OAuth2"]
   }]
 }
