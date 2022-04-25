@@ -94,7 +94,7 @@ VC-API - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/
 
 Ed25519Signature2020 - This tag will run the [Ed25519 tests](https://github.com/w3c-ccg/di-ed25519-test-suite) on either your issuer and/or verifier.
 
-StatusList2021 - This will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
+StatusList2021 - This tag will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
 
 ## Contribute
 
