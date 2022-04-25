@@ -4,11 +4,11 @@
   "issuers": [{
     "id": "did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd",
     "endpoint": "https://issuer-vcs.sandbox.trustbloc.dev/vc-verifier-interop/credentials/issue",
-    "tags": []
+    "tags": ["VC-API"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://verifier-vcs.sandbox.trustbloc.dev/vc-verifier-interop/verifier/credentials/verify",
-    "tags": []
+    "tags": ["VC-API"]
   }]
 }
