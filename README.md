@@ -90,7 +90,7 @@ Implementations may also contain no security (do not add a OAUTH2 or ZCAP sectio
 ### Tags
 Tags tell the test suites which tests your issuer, verifiers, and status lists should be run on.
 
-VC-API - This tag will run [this test on your issuer](https://github.com/w3c-ccg/vc-api-issuer-test-suite) and [this test on your verifier.](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
+VC-API - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite) on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite) on your verifier.
 
 Ed25519Signature2020 - This tag will run the [Ed25519 tests](https://github.com/w3c-ccg/di-ed25519-test-suite) on either your issuer and/or verifier.
 
