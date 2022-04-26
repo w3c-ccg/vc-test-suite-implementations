@@ -1,7 +1,7 @@
 # VC API Test Suite Implementations _(vc-api-test-suite-implementations)_
 
-[![Build status](https://img.shields.io/github/workflow/status/w3c-ccg/vc-api-test-suite-implementations/Node.js%20CI)](https://github.com/digitalbazaar/vc-api-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
-[![Coverage status](https://img.shields.io/codecov/c/github/w3c-ccg/vc-api-test-suite-implementations)](https://codecov.io/gh/digitalbazaar/vc-api-test-suite-implementations)
+[![Build status](https://img.shields.io/github/workflow/status/w3c-ccg/vc-api-test-suite-implementations/Node.js%20CI)](https://github.com/w3c-ccg/vc-api-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
+[![Coverage status](https://img.shields.io/codecov/c/github/w3c-ccg/vc-api-test-suite-implementations)](https://codecov.io/gh/w3c-ccg/vc-api-test-suite-implementations)
 [![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/vc-api-test-suite-implementations.svg)](https://npm.im/@digitalcredentials/vc-api-test-suite-implementations)
 
 > A template skeleton repo for (non-Bedrock) JS libraries that run in Node.js and in the browser.
