@@ -2,7 +2,7 @@
   "name": "vc-api-test-suite-implementations",
   "version": "0.0.1",
   "description": "",
-  "homepage": "https://github.com/digitalbazaar/vc-api-test-suite-implementations",
+  "homepage": "https://github.com/w3c-ccg/vc-api-test-suite-implementations",
   "author": {
     "name": "Digital Bazaar, Inc.",
     "email": "support@digitalbazaar.com",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/vc-api-test-suite-implementations"
+    "url": "https://github.com/w3c-ccg/vc-api-test-suite-implementations"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/vc-api-test-suite-implementations/issues",
+    "url": "https://github.com/w3c-ccg/vc-api-test-suite-implementations/issues",
     "email": "support@digitalbazaar.com"
   },
   "license": "BSD-3-Clause",
