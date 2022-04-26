@@ -55,7 +55,7 @@ Implementations are json in the following form:
 {
   "name": "My Company",
   "implementation": "My Implementation Name",
-  "oath2": {
+  "oauth2": {
      "clientId": "bar",
      "clientSecret": "CLIENT_SECRET_MY_COMPANY",
      "tokenAudience": "https://my.product.net",
