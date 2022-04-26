@@ -33,7 +33,7 @@ Please do not commit any sensitive materials such as oauth2 client secret or cli
 To install via NPM:
 
 ```
-npm install digitalbazaar/vc-api-test-suite-implementations
+npm install w3c-ccg/vc-api-test-suite-implementations
 ```
 
 ### Development
@@ -41,7 +41,7 @@ npm install digitalbazaar/vc-api-test-suite-implementations
 To install locally (for development):
 
 ```
-git clone https://github.com/digitalbazaar/vc-api-test-suite-implementations.git
+git clone https://github.com/w3c-ccg/vc-api-test-suite-implementations.git
 cd vc-api-test-suite-implementations
 npm install
 ```
