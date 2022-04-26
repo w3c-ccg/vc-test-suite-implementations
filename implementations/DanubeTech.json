@@ -4,11 +4,11 @@
   "issuers": [{
     "id": "did:key:z6MkvfambyLsugwe8DCHeUGVJbYZyKne59RDHx2dqmXRG6nB",
     "endpoint": "https://uniissuer.io/1.0/credentials/issue",
-    "tags": []
+    "tags": ["VC-API"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://univerifier.io/1.0/credentials/verify",
-    "tags": []
+    "tags": ["VC-API"]
   }]
 }
