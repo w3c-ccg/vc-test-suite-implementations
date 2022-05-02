@@ -9,6 +9,6 @@
   "verifiers": [{
     "id": "",
     "endpoint": "https://univerifier.io/1.0/credentials/verify",
-    "tags": ["VC-API"]
+    "tags": ["VC-API", "Ed25519Signature2020"]
   }]
 }
