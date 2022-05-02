@@ -9,6 +9,6 @@
   "verifiers": [{
     "id": "",
     "endpoint": "https://verifier-vcs.sandbox.trustbloc.dev/vc-verifier-interop/verifier/credentials/verify",
-    "tags": ["VC-API", "Ed25519Signature2020"]
+    "tags": ["VC-API"]
   }]
 }
