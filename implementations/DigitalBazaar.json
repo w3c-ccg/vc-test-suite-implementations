@@ -21,5 +21,10 @@
       "clientSecret": "CLIENT_SECRET_DB"
     },
     "tags": ["VC-API", "Ed25519Signature2020", "ZCAP", "StatusList2021"]
+  }],
+  "didResolvers": [{
+    "id": "",
+    "endpoint": "https://resolver.dev.veres.app/1.0/resolve/identifiers",
+    "tags": ["Did-Key"]
   }]
 }
