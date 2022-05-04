@@ -3,7 +3,7 @@
   "implementation": "TrustBloc (Sandbox)",
   "issuers": [{
     "id": "did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd",
-    "endpoint": "https://issuer-vcs.sandbox.trustbloc.dev/vc-verifier-interop/credentials/issue",
+    "endpoint": "https://issuer-vcs.sandbox.trustbloc.dev/vc-issuer-interop-key/credentials/issue",
     "tags": ["VC-API"]
   }],
   "verifiers": [{
