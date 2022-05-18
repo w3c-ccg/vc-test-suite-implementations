@@ -2,7 +2,7 @@
   "name": "Danube Tech",
   "implementation": "uni",
   "issuers": [{
-    "id": "did:key:z6MkvfambyLsugwe8DCHeUGVJbYZyKne59RDHx2dqmXRG6nB",
+    "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
     "endpoint": "https://uniissuer.io/1.0/credentials/issue",
     "tags": ["VC-API"]
   }],
