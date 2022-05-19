@@ -15,7 +15,7 @@
     "options": {
       "type": "Ed25519Signature2020"
     },
-    "tags": ["VC-API"]
+    "tags": ["VC-API", "Ed25519Signature2020"]
   },
   {
     "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
