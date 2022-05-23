@@ -23,7 +23,7 @@
     "options": {
       "type": "JsonWebSignature2020"
     },
-    "tags": ["VC-API"]
+    "tags": ["VC-API", "JWT"]
   }],
   "verifiers": [{
     "id": "",
