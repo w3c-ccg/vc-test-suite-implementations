@@ -1,8 +1,8 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import implementerFiles from '../implementations';
-import {Implementation} from './Implementation.js';
+import {default as implementerFiles} from './implementations/index.js';
+import {Implementation} from './lib/Implementation.js';
 export {Endpoint} from './Endpoint.js';
 
 const keyValues = implementerFiles.map(
