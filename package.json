@@ -8,6 +8,11 @@
     "email": "support@digitalbazaar.com",
     "url": "https://digitalbazaar.com/"
   },
+  "type": "module",
+  "exports": {
+    "import": "./lib/main.js",
+    "require": "./lib/index.cjs"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/w3c-ccg/vc-api-test-suite-implementations"
@@ -21,14 +26,12 @@
     "lib/*.js",
     "implementations/*"
   ],
-  "main": "lib/index.js",
-  "module": "lib/main.js",
   "dependencies": {
-    "@digitalbazaar/did-method-key": "^2.0.0",
-    "@digitalbazaar/ed25519-signature-2020": "^3.0.0",
-    "@digitalbazaar/ezcap": "^2.0.4",
-    "@digitalbazaar/http-client": "^2.0.1",
-    "bnid": "^2.1.0",
+    "@digitalbazaar/did-method-key": "github:digitalbazaar/did-method-key#convert-to-module",
+    "@digitalbazaar/ed25519-signature-2020": "github:digitalbazaar/ed25519-signature-2020#convert-to-module",
+    "@digitalbazaar/ezcap": "github:digitalbazaar/ezcap#convert-to-module",
+    "@digitalbazaar/http-client": "^3.2.0",
+    "bnid": "^3.0.0",
     "esm": "^3.2.25",
     "require-dir": "^1.2.0"
   },
