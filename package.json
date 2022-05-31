@@ -9,10 +9,7 @@
     "url": "https://digitalbazaar.com/"
   },
   "type": "module",
-  "exports": {
-    "import": "./lib/main.js",
-    "require": "./lib/index.cjs"
-  },
+  "main": "./lib/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/w3c-ccg/vc-api-test-suite-implementations"
@@ -32,7 +29,6 @@
     "@digitalbazaar/ezcap": "github:digitalbazaar/ezcap#convert-to-module",
     "@digitalbazaar/http-client": "^3.2.0",
     "bnid": "^3.0.0",
-    "esm": "^3.2.25",
     "require-dir": "^1.2.0"
   },
   "devDependencies": {
