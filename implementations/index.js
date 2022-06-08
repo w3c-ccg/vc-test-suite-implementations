@@ -7,4 +7,4 @@ const requireDir = require('require-dir');
 
 const dir = requireDir('./');
 
-export default Object.values(dir);
+export const implementerFiles = Object.values(dir);
