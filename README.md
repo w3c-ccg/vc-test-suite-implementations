@@ -48,6 +48,8 @@ npm install
 
 ## Usage
 
+
+#### Adding a new implementation
 Please add or correct implementations in the `./implementations` dir.
 Implementations are json in the following form:
 
@@ -72,8 +74,8 @@ Implementations are json in the following form:
     "tags": ["VC-HTTP-API", "ZCAP", "OAUTH2"]
   }],
   "verifiers": [{
-    "id": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
-    "endpoint": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+    "id": "https://my.product.net/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
+    "endpoint": "https://my.product.net/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
     "method": "POST",
     "zcap": {
       "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:41473f9f-9e44-4ac9-9ac2-c86a6f695703\",\"controller\":\"did:key:zFoo\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fmy.implementation.net%3A40443%2Fverifiers%2Fz19uokPn3b1Z4XDbQSHo7VhFR\",\"invocationTarget\":\"https://my.implementation.net/verifiers/zBar/credentials/verify\",\"expires\":\"2023-03-17T17:39:49Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2022-03-17T17:39:49Z\",\"verificationMethod\":\"did:key:zFoo#zBar\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fmy.application.net%2Fverifiers%2FzFoo\"],\"proofValue\":\"zBar\"}}",
@@ -86,6 +88,36 @@ Implementations are json in the following form:
 
 Please note: implementations may have security using oauth2 or zcaps, but not both.
 Implementations may also contain no security (do not add a OAUTH2 or ZCAP section in that case).
+
+#### Testing locally
+
+If you need to add implementations for endpoints running locally you may add a config file in the root dir of your test project:
+
+```
+.vcApiTestImplementationsConfig.cjs
+```
+
+That file must be a common js module that exports an array of implementations:
+
+```js
+// file .vcApiTestImplementationsConfig.cjs
+module.exports = [{
+  "name": "My Company",
+  "implementation": "My Implementation Name",
+  "issuers": [{
+    "id": "urn:uuid:my:implementation:issuer:id",
+    "endpoint": "https://localhost:40443/issuers/foo/credentials/issue",
+    "method": "POST",
+    "tags": ["VC-HTTP-API", "localhost"]
+  }],
+  "verifiers": [{
+    "id": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
+    "endpoint": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+    "method": "POST",
+    "tags": ["VC-HTTP-API", "localhost"]
+  }]
+}];
+```
 
 ### Tags
 Tags tell the test suites which tests your issuer, verifiers, and status lists should be run on.
