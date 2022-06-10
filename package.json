@@ -28,6 +28,7 @@
     "@digitalbazaar/ed25519-signature-2020": "github:digitalbazaar/ed25519-signature-2020#convert-to-module",
     "@digitalbazaar/ezcap": "github:digitalbazaar/ezcap#convert-to-module",
     "@digitalbazaar/http-client": "^3.2.0",
+    "app-root-path": "^3.0.0",
     "bnid": "^3.0.0",
     "require-dir": "^1.2.0"
   },
