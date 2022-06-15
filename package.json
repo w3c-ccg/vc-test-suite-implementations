@@ -24,9 +24,9 @@
     "implementations/*"
   ],
   "dependencies": {
-    "@digitalbazaar/did-method-key": "github:digitalbazaar/did-method-key#convert-to-module",
-    "@digitalbazaar/ed25519-signature-2020": "github:digitalbazaar/ed25519-signature-2020#convert-to-module",
-    "@digitalbazaar/ezcap": "github:digitalbazaar/ezcap#convert-to-module",
+    "@digitalbazaar/did-method-key": "^3.0.0",
+    "@digitalbazaar/ed25519-signature-2020": "^4.0.1",
+    "@digitalbazaar/ezcap": "^3.0.1",
     "@digitalbazaar/http-client": "^3.2.0",
     "app-root-path": "^3.0.0",
     "bnid": "^3.0.0",
