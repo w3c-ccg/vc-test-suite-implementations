@@ -1,5 +1,5 @@
 {
-  "name": "apicatalog.com",
+  "name": "API Catalog",
   "implementation": "Iron Verifiable Credentials",
   "verifiers": [{
     "id": "https://vc.apicatalog.com",
