@@ -4,7 +4,5 @@
 
 ### Added
 - Initial commit.
-- New Class `Endpoint` for wrapping generic endpoints.
-
-### Removed
-- parameters `issuerTags` & `verifierTags` from `filterByTag`.
+- Class `Endpoint` for wrapping generic endpoints.
+- API `filterByTag({property: 'verifiers', tags: ['VC_API']})`
