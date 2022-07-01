@@ -18,7 +18,7 @@
 
 ## Background
 
-Implementations added to this package are tested against various test suites in order to demonstrate interopability.
+Implementations added to this package are tested against various test suites in order to demonstrate interoperability.
 
 ## Security
 
@@ -26,7 +26,7 @@ Please do not commit any sensitive materials such as oauth2 client secret or cli
 
 ## Install
 
-- Node.js 14+ is required.
+- Node.js 16+ is required.
 
 ### NPM
 
