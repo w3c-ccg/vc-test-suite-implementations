@@ -1,9 +1,9 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
+import appRoot from 'app-root-path';
 import {createRequire} from 'node:module';
 import {join} from 'node:path';
-import appRoot from 'app-root-path';
 
 const require = createRequire(import.meta.url);
 const requireDir = require('require-dir');
