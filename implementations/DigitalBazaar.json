@@ -72,7 +72,7 @@
     },
     "tags": ["VC-API", "Ed25519Signature2020", "ZCAP", "StatusList2021"]
   }],
-  "statusLists": [{
+  "setStatusLists": [{
     "endpoint": "https://issuer.qa.veres.app/issuers/z19rLmLE8kraZqMinkSPnMyFD/credentials/status",
     "method": "POST",
     "zcap": {
