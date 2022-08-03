@@ -33,6 +33,6 @@
   "didResolvers": [{
     "id": "",
     "endpoint": "https://dev.uniresolver.io/1.0/identifiers",
-    "tags": ["Did-Key"]
+    "tags": ["did-key"]
   }]
 }
