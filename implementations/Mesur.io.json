@@ -2,19 +2,19 @@
   "name": "mesur.io",
   "implementation": "mesur",
   "oauth2": {
-    "clientId": "5SiSCaj8rkfbahG2xrg6nOhxVPKwDwnv",
-    "clientSecret": "CLIENT_SECRET_VC_MESUR_IO",
-    "tokenAudience": "https://vc.mesur.io/",
-    "tokenEndpoint": "https://mesur.auth0.com/oauth/token"
+    "clientId": "Iy59mPAPpnEAMgF8xOUY7gE38AVeDizX",
+    "clientSecret": "CLIENT_SECRET_MESURIO_Iy59",
+    "tokenAudience": "https://vc.stg.mesur.io/",
+    "tokenEndpoint": "https://mesur-stg.us.auth0.com/oauth/token"
   },
   "issuers": [{
-    "id": "did:key:z6Mki93tJ2rwrDaWTMZcdMShk4xLWf75Fu559dAapKe8pdmX",
-    "endpoint": "https://vc.mesur.io/next/credentials/issue",
-    "tags": ["OAuth2"]
+    "id": "did:web:dev.vc.stg.mesur.io:v1",
+    "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/issue",
+    "tags": ["OAuth2", "VC-API"]
   }],
   "verifiers": [{
     "id": "",
-    "endpoint": "https://vc.mesur.io/next/credentials/verify",
-    "tags": ["OAuth2"]
+    "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/verify",
+    "tags": ["OAuth2", "VC-API"]
   }]
 }
