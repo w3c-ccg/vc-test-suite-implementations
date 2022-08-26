@@ -72,7 +72,7 @@
   }],
   "didResolvers": [{
     "id": "",
-    "endpoint": "https://resolver.dev.veres.app/1.0/identifiers/resolve",
+    "endpoint": "https://qa.veresresolver.dev/1.0/identifiers/resolve",
     "tags": ["did-key"]
   }]
 }
