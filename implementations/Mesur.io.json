@@ -10,11 +10,13 @@
   "issuers": [{
     "id": "did:web:dev.vc.stg.mesur.io:v1",
     "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/issue",
+    "scopes": ["issue:credentials"],
     "tags": ["OAuth2", "VC-API"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/verify",
+    "scopes": ["verify:credentials"],
     "tags": ["OAuth2", "VC-API"]
   }]
 }
