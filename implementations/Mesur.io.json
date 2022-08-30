@@ -11,12 +11,16 @@
     "id": "did:web:dev.vc.stg.mesur.io:v1",
     "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/issue",
     "scopes": ["issue:credentials"],
-    "tags": ["OAuth2", "VC-API"]
+    "options": {
+      "type": "Ed25519Signature2018",
+      "created": "2022-08-30T15:40:58.485Z"
+    },
+    "tags": ["OAuth2", "VC-API", "mesur"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/verify",
     "scopes": ["verify:credentials"],
-    "tags": ["OAuth2", "VC-API"]
+    "tags": ["OAuth2", "VC-API", "mesur"]
   }]
 }
