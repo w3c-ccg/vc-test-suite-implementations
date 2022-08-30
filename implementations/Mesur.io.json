@@ -12,8 +12,7 @@
     "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/issue",
     "scopes": ["issue:credentials"],
     "options": {
-      "type": "Ed25519Signature2018",
-      "created": "2022-08-30T15:40:58.485Z"
+      "type": "Ed25519Signature2018"
     },
     "tags": ["OAuth2", "VC-API", "mesur"]
   }],
