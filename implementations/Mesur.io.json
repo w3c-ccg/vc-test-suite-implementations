@@ -3,7 +3,7 @@
   "implementation": "mesur",
   "oauth2": {
     "clientId": "Iy59mPAPpnEAMgF8xOUY7gE38AVeDizX",
-    "clientSecret": "CLIENT_SECRET_MESURIO_Iy59",
+    "clientSecret": "CLIENT_SECRET_MESURIO_IY59",
     "tokenAudience": "https://vc.stg.mesur.io/",
     "tokenEndpoint": "https://mesur-stg.us.auth0.com/oauth/token"
   },
