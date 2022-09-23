@@ -10,11 +10,11 @@
   "issuers": [{
     "id": "did:key:z6MkfFjyzk5CKMdnLacqay3kLMMaZEvKr8yxhks2HezmF4X3",
     "endpoint": "https://api-staging.refiner.neoflow.energy/credentials/issue",
-    "tags": ["OAuth2", "Mavennet", "VC-API"]
+    "tags": ["OAuth2", "Mavennet", "vc-api"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://api-staging.refiner.neoflow.energy/credentials/verify",
-    "tags": ["OAuth2", "Mavennet", "VC-API"]
+    "tags": ["OAuth2", "Mavennet", "vc-api"]
   }]
 }
