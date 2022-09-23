@@ -122,11 +122,13 @@ module.exports = [{
 ### Tags
 Tags tell the test suites which tests your issuer, verifiers, and status lists should be run on.
 
-VC-API - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite) on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite) on your verifier.
+vc-api - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite) on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite) on your verifier.
 
 Ed25519Signature2020 - This tag will run the [Ed25519 tests](https://github.com/w3c-ccg/di-ed25519-test-suite) on either your issuer and/or verifier.
 
 StatusList2021 - This tag will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
+
+did-key - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite) on your did resolver endpoint. 
 
 ## Contribute
 
