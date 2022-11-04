@@ -9,7 +9,7 @@
   }],
   "verifiers": [{
     "id": "",
-    "endpoint": "https://bridge.learncard.com/credentials/verify",
+    "endpoint": "https://vc-api-dev.energyweb.org/v1/vc-api/credentials/verify",
     "tags": ["vc-api", "Ed25519Signature2020"]
   }]
 }
