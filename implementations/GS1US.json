@@ -1,0 +1,17 @@
+{
+    "name": "GS1 US",
+    "implementation": "GS1 US DID-VC-API",
+    "oauth2": {
+        "clientId": "73c9bee3-1371-409e-981f-349e8753d0fe",
+        "clientSecret": "CLIENT_SECRET_GS1US",
+        "tokenAudience": "api://f0c5b99d-e3ac-49e4-8787-bf36cabcf47f",
+        "tokenEndpoint": "https://login.microsoftonline.com/e5e65807-3d2a-4f67-a262-72f255868da0/oauth2/v2.0/token",
+        "scopes": ["api://f0c5b99d-e3ac-49e4-8787-bf36cabcf47f/.default"]
+    },
+    "issuers": [{
+        "id": "did:web:cbpvsvip-vc.gs1us.org",
+        "endpoint": "https://vc.cbpsvip.gs1us.org/cbpsvip/credentials/issue",
+        "method": "POST",
+        "tags": ["vc-api", "OAuth2"]
+    }]
+}
