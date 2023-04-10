@@ -2,24 +2,24 @@
   "name": "mesur.io",
   "implementation": "mesur",
   "oauth2": {
-    "clientId": "Iy59mPAPpnEAMgF8xOUY7gE38AVeDizX",
-    "clientSecret": "CLIENT_SECRET_MESURIO_IY59",
-    "tokenAudience": "https://vc.stg.mesur.io/",
-    "tokenEndpoint": "https://mesur-stg.us.auth0.com/oauth/token"
+    "clientId": "5SiSCaj8rkfbahG2xrg6nOhxVPKwDwnv",
+    "clientSecret": "CLIENT_SECRET_MESURIO_5SiS",
+    "tokenAudience": "https://vc.mesur.io/",
+    "tokenEndpoint": "https://mesur.auth0.com/oauth/token"
   },
   "issuers": [{
-    "id": "did:web:dev.vc.stg.mesur.io:v1",
-    "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/issue",
+    "id": "did:web:vc.mesur.io:v1",
+    "endpoint": "https://vc.mesur.io/v1/credentials/issue",
     "scopes": ["issue:credentials"],
     "options": {
       "type": "Ed25519Signature2018"
     },
-    "tags": ["OAuth2", "vc-api", "mesur"]
+    "tags": ["OAuth2", "vc-api", "StatusList2021"]
   }],
   "verifiers": [{
     "id": "",
-    "endpoint": "https://dev.vc.stg.mesur.io/v1/credentials/verify",
+    "endpoint": "https://vc.mesur.io/v1/credentials/verify",
     "scopes": ["verify:credentials"],
-    "tags": ["OAuth2", "vc-api", "mesur"]
+    "tags": ["OAuth2", "vc-api", "StatusList2021"]
   }]
 }
