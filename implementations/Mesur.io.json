@@ -3,7 +3,7 @@
   "implementation": "mesur",
   "oauth2": {
     "clientId": "5SiSCaj8rkfbahG2xrg6nOhxVPKwDwnv",
-    "clientSecret": "CLIENT_SECRET_MESURIO_5SiS",
+    "clientSecret": "CLIENT_SECRET_MESURIO",
     "tokenAudience": "https://vc.mesur.io/",
     "tokenEndpoint": "https://mesur.auth0.com/oauth/token"
   },
