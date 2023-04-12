@@ -14,7 +14,7 @@
     "options": {
       "type": "Ed25519Signature2018"
     },
-    "tags": ["OAuth2", "vc-api", "StatusList2021"]
+    "tags": ["OAuth2", "vc-api", "StatusList2021", "Revocation", "Suspension"]
   }],
   "verifiers": [{
     "id": "",
