@@ -1,0 +1,22 @@
+{
+  "name": "Spruce",
+  "implementation": "Spruce",
+  "issuers": [{
+    "id": "did:key:z6MkgND5U5Kedizov5nxeh2ZCVUTDRSmAfbNqPhzCq8b72Ra",
+    "endpoint": "https://vc.spruceid.xyz/credentials/issue",
+    "options": {
+      "type": "Ed25519Signature2020"
+    },
+    "tags": ["vc-api", "Ed25519Signature2020", "JWT"]
+  }],
+  "verifiers": [{
+    "id": "https://spruceid.com",
+    "endpoint": "https://vc.spruceid.xyz/credentials/verify",
+    "tags": ["vc-api", "Ed25519Signature2020", "JWT"]
+  }],
+  "didResolvers": [{
+    "id": "https://spruceid.com",
+    "endpoint": "https://vc.spruceid.xyz/identifiers",
+    "tags": ["did-key"]
+  }]
+}
