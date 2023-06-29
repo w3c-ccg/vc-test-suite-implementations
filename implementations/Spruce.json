@@ -7,12 +7,34 @@
     "options": {
       "type": "Ed25519Signature2020"
     },
-    "tags": ["vc-api", "Ed25519Signature2020", "JWT"]
+    "tags": ["vc-api", "Ed25519Signature2020"]
+  }, {
+    "id": "did:key:z6MkgND5U5Kedizov5nxeh2ZCVUTDRSmAfbNqPhzCq8b72Ra",
+    "endpoint": "https://vc.spruceid.xyz/credentials/issue",
+    "tags": ["vc-api", "JWT"]
+  }, {
+    "id": "did:key:z6MkgND5U5Kedizov5nxeh2ZCVUTDRSmAfbNqPhzCq8b72Ra",
+    "endpoint": "https://vc.spruceid.xyz/credentials/issue",
+    "options": {
+      "type": "DataIntegrityProof"
+    },
+    "tags": ["vc-api", "eddsa-2020"]
+  }, {
+    "id": "did:key:zDnaei6w9La4VphyPA6V2V5poBTpVtjCsnzPML5c78GWjRhnc",
+    "endpoint": "https://vc.spruceid.xyz/credentials/issue",
+    "options": {
+      "type": "DataIntegrityProof"
+    },
+    "tags": ["vc-api", "ecdsa-2019"]
+  }, {
+    "id": "did:key:zDnaei6w9La4VphyPA6V2V5poBTpVtjCsnzPML5c78GWjRhnc",
+    "endpoint": "https://vc.spruceid.xyz/credentials/issue",
+    "tags": ["vc-api", "JWT"]
   }],
   "verifiers": [{
     "id": "https://spruceid.com",
     "endpoint": "https://vc.spruceid.xyz/credentials/verify",
-    "tags": ["vc-api", "Ed25519Signature2020", "JWT"]
+    "tags": ["vc-api", "Ed25519Signature2020", "JWT", "eddsa-2020", "ecdsa-2019"]
   }],
   "didResolvers": [{
     "id": "https://spruceid.com",
