@@ -18,7 +18,7 @@
     "options": {
       "type": "DataIntegrityProof"
     },
-    "tags": ["vc-api", "eddsa-2020"]
+    "tags": ["vc-api", "eddsa-2022"]
   }, {
     "id": "did:key:zDnaei6w9La4VphyPA6V2V5poBTpVtjCsnzPML5c78GWjRhnc",
     "endpoint": "https://vc.spruceid.xyz/credentials/issue",
@@ -34,7 +34,7 @@
   "verifiers": [{
     "id": "https://spruceid.com",
     "endpoint": "https://vc.spruceid.xyz/credentials/verify",
-    "tags": ["vc-api", "Ed25519Signature2020", "JWT", "eddsa-2020", "ecdsa-2019"]
+    "tags": ["vc-api", "Ed25519Signature2020", "JWT", "eddsa-2022", "ecdsa-2019"]
   }],
   "didResolvers": [{
     "id": "https://spruceid.com",
