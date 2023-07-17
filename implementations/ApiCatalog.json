@@ -1,11 +1,11 @@
 {
-  "name": "API Catalog",
+  "name": "apicatalog.com",
   "implementation": "Iron Verifiable Credentials",
   "verifiers": [{
     "id": "https://vc.apicatalog.com",
     "endpoint": "https://vc.apicatalog.com/credentials/verify",
     "method": "POST",
-    "tags": ["vc-api", "Ed25519Signature2020" ]
+    "tags": ["vc-api", "Ed25519Signature2020", "vc2.0", "eddsa-2022", "ecdsa-2019" ]
   }],
   "issuers": [{
     "id": "did:key:z6Mkska8oQD7QQQWxqa7L5ai4mH98HfAdSwomPFYKuqNyE2y",
@@ -13,6 +13,6 @@
     "options": {
       "type": "Ed25519Signature2020"
     },
-    "tags": ["vc-api", "Ed25519Signature2020"]
+    "tags": ["vc-api", "Ed25519Signature2020", "vc2.0", "eddsa-2022", "ecdsa-2019" ]
   }]
 }
