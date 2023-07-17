@@ -7,7 +7,7 @@
     "options": {
       "type": "Ed25519Signature2018"
     },
-    "tags": ["VC-API"]
+    "tags": ["vc-api"]
   },
   {
     "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
@@ -15,7 +15,7 @@
     "options": {
       "type": "Ed25519Signature2020"
     },
-    "tags": ["VC-API", "Ed25519Signature2020"]
+    "tags": ["vc-api", "Ed25519Signature2020"]
   },
   {
     "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
@@ -23,16 +23,16 @@
     "options": {
       "type": "JsonWebSignature2020"
     },
-    "tags": ["VC-API", "JsonWebSignature2020"]
+    "tags": ["vc-api", "JsonWebSignature2020"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://univerifier.io/1.0/credentials/verify",
-    "tags": ["VC-API", "Ed25519Signature2020"]
+    "tags": ["vc-api", "Ed25519Signature2020"]
   }],
   "didResolvers": [{
     "id": "",
     "endpoint": "https://dev.uniresolver.io/1.0/identifiers",
-    "tags": ["Did-Key"]
+    "tags": ["did-key"]
   }]
 }

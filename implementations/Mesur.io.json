@@ -3,18 +3,23 @@
   "implementation": "mesur",
   "oauth2": {
     "clientId": "5SiSCaj8rkfbahG2xrg6nOhxVPKwDwnv",
-    "clientSecret": "CLIENT_SECRET_VC_MESUR_IO",
+    "clientSecret": "CLIENT_SECRET_MESURIO",
     "tokenAudience": "https://vc.mesur.io/",
     "tokenEndpoint": "https://mesur.auth0.com/oauth/token"
   },
   "issuers": [{
-    "id": "did:key:z6Mki93tJ2rwrDaWTMZcdMShk4xLWf75Fu559dAapKe8pdmX",
-    "endpoint": "https://vc.mesur.io/next/credentials/issue",
-    "tags": ["OAuth2"]
+    "id": "did:web:vc.mesur.io:v1",
+    "endpoint": "https://vc.mesur.io/v1/credentials/issue",
+    "scopes": ["issue:credentials"],
+    "options": {
+      "type": "Ed25519Signature2018"
+    },
+    "tags": ["OAuth2", "vc-api", "StatusList2021", "Revocation", "Suspension"]
   }],
   "verifiers": [{
     "id": "",
-    "endpoint": "https://vc.mesur.io/next/credentials/verify",
-    "tags": ["OAuth2"]
+    "endpoint": "https://vc.mesur.io/v1/credentials/verify",
+    "scopes": ["verify:credentials"],
+    "tags": ["OAuth2", "vc-api", "StatusList2021"]
   }]
 }

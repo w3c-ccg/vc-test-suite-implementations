@@ -1,20 +1,20 @@
 {
   "name": "Mavennet",
-  "implementation": "neo-flow",
+  "implementation": "Neoflow",
   "oauth2": {
-    "clientId": "49c4bkk6a4soinkk3eru6le50j",
+    "clientId": "1skggb4216e0ohgjjq4aast9i1",
     "clientSecret": "CLIENT_SECRET_MAVENNET",
-    "tokenAudience": "https://api-staging.producer.neoflow.energy/v1/credentials",
-    "tokenEndpoint": "https://api-staging.producer.neoflow.energy/v1/auth"
+    "tokenAudience": "https://api.staging.refiner.neoflow.energy/v1",
+    "tokenEndpoint": "https://api.staging.refiner.neoflow.energy/v1/auth"
   },
   "issuers": [{
-    "id": "did:key:z6MkiTsvjrrPNDZ1rrg9QDEYCFWCmEswT6U2cEkScb7edQ9b",
-    "endpoint": "https://api.neo-flow.com/credentials/issueCredential",
-    "tags": ["OAuth2"]
+    "id": "did:key:z6MkfFjyzk5CKMdnLacqay3kLMMaZEvKr8yxhks2HezmF4X3",
+    "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/issue",
+    "tags": ["OAuth2", "Mavennet", "vc-api"]
   }],
   "verifiers": [{
     "id": "",
-    "endpoint": "https://api.neo-flow.com/verifier/credentials",
-    "tags": ["OAuth2"]
+    "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/verify",
+    "tags": ["OAuth2", "Mavennet", "vc-api"]
   }]
 }
