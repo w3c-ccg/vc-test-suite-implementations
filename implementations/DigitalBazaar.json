@@ -104,17 +104,16 @@
       "keySeed": "KEY_SEED_DB"
     },
     "tags": ["vc2.0"]
-  },
-  {
+  }],
+  "vpVerifiers": [{
     "id": "https://verifier.qa.veres.app/verifiers/z19mFGL4n9MeFiNzPbge5gJrz",
     "endpoint": "https://verifier.qa.veres.app/verifiers/z19mFGL4n9MeFiNzPbge5gJrz/presentations/verify",
     "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:452d121c-c69e-4338-9a03-cd20e8d2a85a\",\"controller\":\"did:key:z6MkptjaoxjyKQFSqf1dHXswP6EayYhPQBYzprVCPmGBHz9S\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fverifier.qa.veres.app%2Fverifiers%2Fz19mFGL4n9MeFiNzPbge5gJrz\",\"invocationTarget\":\"https://verifier.qa.veres.app/verifiers/z19mFGL4n9MeFiNzPbge5gJrz/presentations/verify\",\"expires\":\"2024-07-20T17:03:57Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2023-07-21T17:03:58Z\",\"verificationMethod\":\"did:key:z6MkkkanLE2mcwABMS3RrN4S81E5zo3SSjo7Lc6EBKB4w5ck#z6MkkkanLE2mcwABMS3RrN4S81E5zo3SSjo7Lc6EBKB4w5ck\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fverifier.qa.veres.app%2Fverifiers%2Fz19mFGL4n9MeFiNzPbge5gJrz\"],\"proofValue\":\"z23LjDXNW2cdKh65JpG4krCU5R2X3D9NpRQQpXLGbrLKtmh9XEfeFGf6QgpxkR15Ui6UHjuD6dMfuU4GYAWL4jSPj\"}}",
     "zcap": {
       "keySeed": "KEY_SEED_DB"
     },
-    "tags": ["vcdm2"]
-  }
-],
+    "tags": ["vc2.0"]
+  }],
   "didResolvers": [{
     "id": "",
     "endpoint": "https://qa.veresresolver.dev/1.0/identifiers/resolve",
