@@ -130,6 +130,12 @@ StatusList2021 - This tag will run the [Status List 2021 tests](https://github.c
 
 did-key - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite) on your did resolver endpoint.
 
+ecdsa-2019 - This tag will run the [VC Data Integrity ECDSA Test Suite](https://github.com/w3c-ccg/vc-di-ecdsa-test-suite) on your issuer and verifier endpoints.
+
+eddsa-2022 - This tag will run the [VC Data Integrity EDDSA Test Suite](https://github.com/w3c-ccg/di-eddsa-2022-test-suite) on your issuer and verifier endpoints.
+
+vc2.0 - This tag will run the [VC Data Model 2.0 Test Suite](https://github.com/digitalbazaar/vc-data-model-2-test-suite) on your issuer and verifier endpoints.
+
 ## Contribute
 
 See [the contribute file](https://github.com/digitalbazaar/bedrock/blob/master/CONTRIBUTING.md)!
