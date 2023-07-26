@@ -22,7 +22,7 @@
     },
     "tags": ["vc-api", "eddsa-2022"]
   }, {
-    "id": "did:key:z6Mkska8oQD7QQQWxqa7L5ai4mH98HfAdSwomPFYKuqNyE2y",
+    "id": "did:key:zDnaepBuvsQ8cpsWrVKw8fbpGpvPeNSjVPTWoq6cRqaYzBKVP",
     "endpoint": "https://vc.apicatalog.com/credentials/issue",
     "options": {
       "type": "ecdsa-2019"
