@@ -1,0 +1,21 @@
+{
+  "name": "Trinsic",
+  "implementation": "Trinsic",
+  "issuers": [
+    {
+      "id": "https://trinsic.id",
+      "endpoint": "https://interop.connect.trinsic.cloud/vc-api/credentials/issue",
+      "options": {
+        "type": "DataIntegrityProof"
+      },
+      "tags": ["eddsa-2022"]
+    }
+  ],
+  "verifiers": [
+    {
+      "id": "https://trinsic.id",
+      "endpoint": "https://interop.connect.trinsic.cloud/vc-api/credentials/verify",
+      "tags": ["eddsa-2022"]
+    }
+  ]
+}
