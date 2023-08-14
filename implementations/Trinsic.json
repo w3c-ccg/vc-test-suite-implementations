@@ -12,6 +12,6 @@
   "verifiers": [{
     "id": "https://trinsic.id",
     "endpoint": "https://interop.connect.trinsic.cloud/vc-api/credentials/verify",
-    "tags": ["vc-api", "eddsa-2022", "Ed25519Signature2020"]
+    "tags": ["vc-api", "eddsa-2022"]
   }]
 }
