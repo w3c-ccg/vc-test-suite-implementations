@@ -7,11 +7,11 @@
     "options": {
       "type": "DataIntegrityProof"
     },
-    "tags": ["eddsa-2022"]
+    "tags": ["vc-api", "eddsa-2022"]
   }],
   "verifiers": [{
     "id": "https://trinsic.id",
     "endpoint": "https://interop.connect.trinsic.cloud/vc-api/credentials/verify",
-    "tags": ["eddsa-2022"]
+    "tags": ["vc-api", "eddsa-2022"]
   }]
 }
