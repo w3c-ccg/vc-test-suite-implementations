@@ -7,14 +7,21 @@
     "tokenAudience": "https://api.staging.refiner.neoflow.energy/v1",
     "tokenEndpoint": "https://api.staging.refiner.neoflow.energy/v1/auth"
   },
-  "issuers": [{
-    "id": "did:key:z6MkfFjyzk5CKMdnLacqay3kLMMaZEvKr8yxhks2HezmF4X3",
-    "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/issue",
-    "tags": ["OAuth2", "Mavennet", "vc-api"]
-  }],
-  "verifiers": [{
-    "id": "",
-    "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/verify",
-    "tags": ["OAuth2", "Mavennet", "vc-api"]
-  }]
+  "issuers": [
+    {
+      "id": "did:key:z6MkfFjyzk5CKMdnLacqay3kLMMaZEvKr8yxhks2HezmF4X3",
+      "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/issue",
+      "options": {
+        "type": "Ed25519Signature2018"
+      },
+      "tags": ["OAuth2", "vc-api", "Ed25519Signature2018"]
+    }
+  ],
+  "verifiers": [
+    {
+      "id": "",
+      "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/verify",
+      "tags": ["OAuth2", "vc-api", "Ed25519Signature2018"]
+    }
+  ]
 }
