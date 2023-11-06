@@ -4,7 +4,7 @@
 [![Coverage status](https://img.shields.io/codecov/c/github/w3c-ccg/vc-api-test-suite-implementations)](https://codecov.io/gh/w3c-ccg/vc-api-test-suite-implementations)
 [![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/vc-api-test-suite-implementations.svg)](https://npm.im/@digitalcredentials/vc-api-test-suite-implementations)
 
-> A template skeleton repo for (non-Bedrock) JS libraries that run in Node.js and in the browser.
+> Implementations list used across various W3C CCG test suites.
 
 ## Table of Contents
 
