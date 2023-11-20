@@ -124,17 +124,22 @@ Tags tell the test suites which tests your issuer, verifiers, and status lists s
 
 vc-api - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite) on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite) on your verifier.
 
-Ed25519Signature2020 - This tag will run the [Ed25519 tests](https://github.com/w3c-ccg/di-ed25519-test-suite) on either your issuer and/or verifier.
+* `Ed25519Signature2020` - This tag will run the [Ed25519 tests](https://github.com/w3c/vc-di-ed25519signature2020-test-suite) on either your issuer and/or verifier.
 
-StatusList2021 - This tag will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
+* `StatusList2021` - This tag will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
 
-did-key - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite) on your did resolver endpoint.
+* `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite) on your did resolver endpoint.
 
-ecdsa-2019 - This tag will run the [VC Data Integrity ECDSA Test Suite](https://github.com/w3c-ccg/vc-di-ecdsa-test-suite) on your issuer and verifier endpoints.
+* `ecdsa-rdfc-2019` or `ecdsa-sd-2023` - These tags will run the
+[VC Data Integrity ECDSA Test Suite](https://github.com/w3c/vc-di-ecdsa-test-suite)
+on your issuer and verifier endpoints.
+  * Alongside this cryptosuite tag, you must also specify the `supportedEcdsaKeyTypes`
+  key parallel to `tags` listing the ECDSA key types that your implementation issues or
+  can verify. Currently, the test suite supports `P-256` and `P-384` ECDSA key types.
 
-eddsa-2022 - This tag will run the [VC Data Integrity EDDSA Test Suite](https://github.com/w3c-ccg/di-eddsa-2022-test-suite) on your issuer and verifier endpoints.
+* `eddsa-rdfc-2022` - This tag will run the [VC Data Integrity EDDSA Test Suite](https://github.com/w3c/vc-di-eddsa-test-suite) on your issuer and verifier endpoints.
 
-vc2.0 - This tag will run the [VC Data Model 2.0 Test Suite](https://github.com/digitalbazaar/vc-data-model-2-test-suite) on your issuer and verifier endpoints.
+* `vc2.0` - This tag will run the [VC Data Model 2.0 Test Suite](https://github.com/w3c/vc-data-model-2.0-test-suite) on your issuer and verifier endpoints.
 
 ## Contribute
 
