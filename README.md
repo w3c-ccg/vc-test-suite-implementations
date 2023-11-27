@@ -20,7 +20,6 @@
       - [Testing locally](#testing-locally)
     - [Tags](#tags)
   - [Contribute](#contribute)
-  - [Commercial Support](#commercial-support)
   - [License](#license)
 
 ## Background
@@ -158,11 +157,6 @@ PRs accepted.
 
 If editing the Readme, please conform to the
 [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
-
-## Commercial Support
-
-Commercial support for this library is available upon request from
-Digital Bazaar: support@digitalbazaar.com
 
 ## License
 
