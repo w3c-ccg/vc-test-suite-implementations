@@ -8,13 +8,20 @@
 
 ## Table of Contents
 
-- [Background](#background)
-- [Security](#security)
-- [Install](#install)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [Commercial Support](#commercial-support)
-- [License](#license)
+- [VC API Test Suite Implementations _(vc-api-test-suite-implementations)_](#vc-api-test-suite-implementations-vc-api-test-suite-implementations)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Security](#security)
+  - [Install](#install)
+    - [NPM](#npm)
+    - [Development](#development)
+  - [Usage](#usage)
+      - [Adding a new implementation](#adding-a-new-implementation)
+      - [Testing locally](#testing-locally)
+    - [Tags](#tags)
+  - [Contribute](#contribute)
+  - [Commercial Support](#commercial-support)
+  - [License](#license)
 
 ## Background
 
