@@ -12,6 +12,6 @@
         "id": "did:web:cbpvsvip-vc.gs1us.org",
         "endpoint": "https://vc.cbpsvip.gs1us.org/cbpsvip/credentials/issue",
         "method": "POST",
-        "tags": ["vc-api", "OAuth2"]
+        "tags": ["vc-api"]
     }]
 }
