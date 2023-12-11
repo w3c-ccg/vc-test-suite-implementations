@@ -8,27 +8,18 @@
       "type": "Ed25519Signature2018"
     },
     "tags": ["vc-api"]
-  },
-  {
-    "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
-    "endpoint": "https://uniissuer.io/1.0/credentials/issue",
-    "options": {
-      "type": "Ed25519Signature2020"
-    },
-    "tags": ["vc-api", "Ed25519Signature2020"]
-  },
-  {
+  }, {
     "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
     "endpoint": "https://uniissuer.io/1.0/credentials/issue",
     "options": {
       "type": "JsonWebSignature2020"
     },
-    "tags": ["vc-api", "JsonWebSignature2020"]
+    "tags": ["JsonWebSignature2020"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://univerifier.io/1.0/credentials/verify",
-    "tags": ["vc-api", "Ed25519Signature2020"]
+    "tags": ["vc-api"]
   }],
   "didResolvers": [{
     "id": "",
