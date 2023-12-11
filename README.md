@@ -132,17 +132,22 @@ Please Note:
 1. Tags serve as identifiers to determine which test suites to run on your
 issuers and verifiers. Only the first issuer/verifier found with a specific
 tag from your list will be run against the test suite, while subsequent issuers
-and verifiers bearing the same tag won't. This applies to all the test
-suites listed below associated with this implementations repository.
+and verifiers bearing the same tag won't. This applies to most of the test
+suites associated with this implementations repository listed below.
 
 For instance, if you have added the tag `vc-api` to all your issuers and
 verifiers to run them with vc api issuer and verifier test suites, only the
 first match will be used in the test suites. In the sample configuration below,
-only the issuer and verifier with the ID
-https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR will be selected.
+only the issuer and verifier with the IDs
+https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR and
+https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR will be selected.
 Therefore, please avoid adding duplicate tags.
 
+Example
 ```js
+// Only the first match https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR
+// and https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR will be
+// run against the VC API issuer and verifier test suites.
 {
   "issuers": [{
     "id": "https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR",
@@ -151,28 +156,29 @@ Therefore, please avoid adding duplicate tags.
   }, {
     "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
     "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
-    "tags": ["vc-api", "Ed25519Signature2020"]
+    "tags": ["vc-api"]
   }],
   "verifiers": [{
-    "id": "https://product.example.com/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
-    "endpoint": "https://product.example.com/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+    "id": "https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR",
+    "endpoint": "https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR/credentials/verify",
     "tags": ["vc-api"]
   }, {
     "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
     "endpoint": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/verify",
-    "tags": ["vc-api", "Ed25519Signature2020"]
+    "tags": ["vc-api"]
   }]
 }
 ```
 
+
 2. If an issuer or verifier supports multiple VC signature types, you can assign
-multiple tags to them, eliminating the need for redundant entries. For instance,
-if an issuer/verifier with the ID
+multiple tags to them, eliminating the need for redundant entries to run against
+multiple test suites. For instance, if an issuer with the ID
 https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR can be run with
-both the Ed25519Signature2020 and VC API test suites, a single entry with
-multiple/combined tags can be used. This consolidated entry, containing tags for
-both VC API and Ed25519Signature2020 test suites, ensures that the issuer and
-the verifier are run against both test suites. Here is an example of how to
+both the Status List 2021 and VC API test suites, a single entry with
+multiple tags can be used. This consolidated entry, containing tags for
+both VC API and Status List 2021 test suites, ensures that the issuer and
+the verifier will be run against both test suites. Here is an example of how to
 structure the entry:
 
 For Example:
@@ -181,12 +187,12 @@ For Example:
   "issuers": [{
     "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
     "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
-    "tags": ["vc-api", "Ed25519Signature2020"]
+    "tags": ["vc-api", "StatusList2021", "Suspension"]
   }],
   "verifiers": [{
     "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
     "endpoint": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/verify",
-    "tags": ["vc-api", "Ed25519Signature2020"]
+    "tags": ["vc-api"]
   }]
 }
 ```
@@ -196,10 +202,6 @@ For Example:
 * `vc-api` - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite)
 on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
 on your verifier.
-
-#### Ed25519Signature2020 Test Suite
-
-* `Ed25519Signature2020` - This tag will run the [Ed25519 tests](https://github.com/w3c/vc-di-ed25519signature2020-test-suite) on your issuer and/or verifier.
 
 #### Status List 2021 Test Suite
 
