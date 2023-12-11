@@ -127,16 +127,69 @@ module.exports = [{
 
 ### Opting into a Test Suite
 
-Note: Tags are required to determine which test suites are executed on your
-issuers and verifiers. Only the first issuer/verifier with the tag found from
-your implementations list will be selected to run against the test suites,
-while subsequent issuers and verifiers that contain the same tag won't be
-tested. This is true for most of the test suites except ECDSA test suite since
-the ECDSA test suite will select all the issuers and verifiers with the tag
-from your implementations list and run them against the tests, in other words,
-for ECDSA test suite an implementer can have multiple issuer and verifiers with
-the same tags depending on the different key types they support. Other test
-suites find and use the first issuer/verifier match containing the tag.
+Please Note:
+
+1. Tags serve as identifiers to determine which test suites to run on your
+issuers and verifiers. Only the first issuer/verifier found with a specific
+tag from your list will be run against the test suite, while subsequent issuers
+and verifiers bearing the same tag won't. This applies to all the test
+suites listed below associated with this implementations repository.
+
+For instance, if you have added the tag `vc-api` to all your issuers and
+verifiers to run them with vc api issuer and verifier test suites, only the
+first match will be used in the test suites. In the sample configuration below,
+only the issuer and verifier with the ID
+https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR will be selected.
+Therefore, please avoid adding duplicate tags.
+
+```js
+{
+  "issuers": [{
+    "id": "https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR",
+    "endpoint": "https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR/credentials/issue",
+    "tags": ["vc-api"]
+  }, {
+    "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
+    "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
+    "tags": ["vc-api", "Ed25519Signature2020"]
+  }],
+  "verifiers": [{
+    "id": "https://product.example.com/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
+    "endpoint": "https://product.example.com/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+    "tags": ["vc-api"]
+  }, {
+    "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
+    "endpoint": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/verify",
+    "tags": ["vc-api", "Ed25519Signature2020"]
+  }]
+}
+```
+
+2. If an issuer or verifier supports multiple VC signature types, you can assign
+multiple tags to them, eliminating the need for redundant entries. For instance,
+if an issuer/verifier with the ID
+https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR can be run with
+both the Ed25519Signature2020 and VC API test suites, a single entry with
+multiple/combined tags can be used. This consolidated entry, containing tags for
+both VC API and Ed25519Signature2020 test suites, ensures that the issuer and
+the verifier are run against both test suites. Here is an example of how to
+structure the entry:
+
+For Example:
+```js
+{
+  "issuers": [{
+    "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
+    "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
+    "tags": ["vc-api", "Ed25519Signature2020"]
+  }],
+  "verifiers": [{
+    "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
+    "endpoint": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/verify",
+    "tags": ["vc-api", "Ed25519Signature2020"]
+  }]
+}
+```
 
 #### VC API Issuer and Verifier Test Suites
 
@@ -144,7 +197,11 @@ suites find and use the first issuer/verifier match containing the tag.
 on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
 on your verifier.
 
+#### Ed25519Signature2020 Test Suite
+
 * `Ed25519Signature2020` - This tag will run the [Ed25519 tests](https://github.com/w3c/vc-di-ed25519signature2020-test-suite) on your issuer and/or verifier.
+
+#### Status List 2021 Test Suite
 
 * `StatusList2021` and `Revocation`/`Suspension`- Combining the `StatusList2021`
 tag with `Revocation` or `Suspension` tags will run the
@@ -156,22 +213,12 @@ on your issuer and/or verifier.
   issuers or verifiers issuing/verifying VCs with the suspension status purpose.
   * Note: To update the status of VCs and publish the updated status, additional
   endpoints `setStatusLists` - `/credentials/status` and `publishStatusLists`
-  - `/credentials/publish` might also need to be specified.
+  - `/credentials/publish` may also need to be specified.
+
+#### DID Key Test Suite
 
 * `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite)
 on your DID resolver endpoint.
-
-* `ecdsa-rdfc-2019` or `ecdsa-sd-2023` - These tags will run the
-[VC Data Integrity ECDSA Test Suite](https://github.com/w3c/vc-di-ecdsa-test-suite)
-on your issuer and verifier endpoints.
-  * Alongside this cryptosuite tag, you must also specify the
-  `supportedEcdsaKeyTypes` key parallel to `tags` listing the ECDSA key types
-  that your implementation issues or can verify. Currently, the test suite
-  supports `P-256` and `P-384` ECDSA key types.
-
-* `eddsa-rdfc-2022` - This tag will run the [VC Data Integrity EDDSA Test Suite](https://github.com/w3c/vc-di-eddsa-test-suite) on your issuer and verifier endpoints.
-
-* `vc2.0` - This tag will run the [VC Data Model 2.0 Test Suite](https://github.com/w3c/vc-data-model-2.0-test-suite) on your issuer and verifier endpoints.
 
 ## Contribute
 
