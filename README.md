@@ -14,8 +14,8 @@
     - [NPM](#npm)
     - [Development](#development)
   - [Usage](#usage)
-      - [Adding a new implementation](#adding-a-new-implementation)
-      - [Testing locally](#testing-locally)
+    - [Adding a new implementation](#adding-a-new-implementation)
+    - [Testing locally](#testing-locally)
     - [Opting into a Test Suite](#opting-into-a-test-suite)
   - [Contribute](#contribute)
   - [License](#license)
@@ -55,7 +55,7 @@ npm install
 ## Usage
 
 
-#### Adding a new implementation
+### Adding a new implementation
 Please add implementations to the `./implementations` directory.
 Implementation configuration files are expressed in JSON and use roughly the
 following form:
@@ -96,7 +96,7 @@ both.
 Implementations may also contain no security (do not add a OAUTH2 or ZCAP
 section in that case).
 
-#### Testing locally
+### Testing locally
 
 If you need to add implementations for endpoints running locally you may add a
 config file in the root dir of your test project:
@@ -127,7 +127,18 @@ module.exports = [{
 
 ### Opting into a Test Suite
 
-Tags determine which test suites are executed on your issuers and verifiers.
+Note: Tags are required to determine which test suites are executed on your
+issuers and verifiers. Only the first issuer/verifier with the tag found from
+your implementations list will be selected to run against the test suites,
+while subsequent issuers and verifiers that contain the same tag won't be
+tested. This is true for most of the test suites except ECDSA test suite since
+the ECDSA test suite will select all the issuers and verifiers with the tag
+from your implementations list and run them against the tests, in other words,
+for ECDSA test suite an implementer can have multiple issuer and verifiers with
+the same tags depending on the different key types they support. Other test
+suites find and use the first issuer/verifier match containing the tag.
+
+#### VC API Issuer and Verifier Test Suites
 
 * `vc-api` - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite)
 on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
@@ -144,8 +155,8 @@ on your issuer and/or verifier.
   * Adding the `Suspension` tag alongside `StatusList2021` runs tests for
   issuers or verifiers issuing/verifying VCs with the suspension status purpose.
   * Note: To update the status of VCs and publish the updated status, additional
-    endpoints `setStatusLists` - `/credentials/status` and `publishStatusLists`
-    - `/credentials/publish` might also need to be specified.
+  endpoints `setStatusLists` - `/credentials/status` and `publishStatusLists`
+  - `/credentials/publish` might also need to be specified.
 
 * `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite)
 on your DID resolver endpoint.
