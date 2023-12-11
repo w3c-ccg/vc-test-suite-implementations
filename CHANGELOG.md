@@ -1,5 +1,15 @@
 # isomorphic-js-lib-template Changelog
 
+## 2.0.0 - 2023-12-11
+
+### Changed
+- Update `README.md` to add additional information about requirements for
+  opting into a test suite.
+
+### Removed
+- Remove tags for `ecdsa`, `eddsa`, `ed25519signature2020`, and `vc2.0` test
+  suites that are not associated with this implementations repo.
+
 ## 1.0.1 - 2023-12-07
 
 ### Removed
