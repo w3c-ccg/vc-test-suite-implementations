@@ -1,8 +1,6 @@
 # VC API Test Suite Implementations _(vc-api-test-suite-implementations)_
 
 [![Build status](https://img.shields.io/github/workflow/status/w3c-ccg/vc-api-test-suite-implementations/Node.js%20CI)](https://github.com/w3c-ccg/vc-api-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
-[![Coverage status](https://img.shields.io/codecov/c/github/w3c-ccg/vc-api-test-suite-implementations)](https://codecov.io/gh/w3c-ccg/vc-api-test-suite-implementations)
-[![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/vc-api-test-suite-implementations.svg)](https://npm.im/@digitalcredentials/vc-api-test-suite-implementations)
 
 > Implementations list used across various W3C CCG test suites.
 
@@ -18,21 +16,23 @@
   - [Usage](#usage)
       - [Adding a new implementation](#adding-a-new-implementation)
       - [Testing locally](#testing-locally)
-    - [Tags](#tags)
+    - [Opting into a Test Suite](#opting-into-a-test-suite)
   - [Contribute](#contribute)
   - [License](#license)
 
 ## Background
 
-Implementations added to this package are tested against various test suites in order to demonstrate interoperability.
+Implementations added to this package are tested against various test suites
+in order to demonstrate interoperability.
 
 ## Security
 
-Please do not commit any sensitive materials such as oauth2 client secret or client secrets used for signing zcaps or HTTP Signature Headers.
+Please do not commit any sensitive materials such as oauth2 client secret or
+client secrets used for signing zcaps or HTTP Signature Headers.
 
 ## Install
 
-- Node.js 16+ is required.
+- Node.js 18+ is required.
 
 ### NPM
 
@@ -91,12 +91,15 @@ following form:
 }
 ```
 
-Please note: implementations may have security using oauth2 or zcaps, but not both.
-Implementations may also contain no security (do not add a OAUTH2 or ZCAP section in that case).
+Please note: implementations may have security using oauth2 or zcaps, but not
+both.
+Implementations may also contain no security (do not add a OAUTH2 or ZCAP
+section in that case).
 
 #### Testing locally
 
-If you need to add implementations for endpoints running locally you may add a config file in the root dir of your test project:
+If you need to add implementations for endpoints running locally you may add a
+config file in the root dir of your test project:
 
 ```
 .vcApiTestImplementationsConfig.cjs
@@ -122,24 +125,38 @@ module.exports = [{
 }];
 ```
 
-### Tags
-Tags tell the test suites which tests should be run on your issuer, verifier,
-and status lists.
+### Opting into a Test Suite
 
-* `vc-api` - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite) on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite) on your verifier.
+Tags determine which test suites are executed on your issuers and verifiers.
+
+* `vc-api` - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite)
+on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
+on your verifier.
 
 * `Ed25519Signature2020` - This tag will run the [Ed25519 tests](https://github.com/w3c/vc-di-ed25519signature2020-test-suite) on your issuer and/or verifier.
 
-* `StatusList2021` - This tag will run the [Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite) on your issuer and/or verifier.
+* `StatusList2021` and `Revocation`/`Suspension`- Combining the `StatusList2021`
+tag with `Revocation` or `Suspension` tags will run the
+[Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite)
+on your issuer and/or verifier.
+  * Adding the `Revocation` tag alongside `StatusList2021` runs tests for
+  issuers or verifiers issuing/verifying VCs with the revocation status purpose.
+  * Adding the `Suspension` tag alongside `StatusList2021` runs tests for
+  issuers or verifiers issuing/verifying VCs with the suspension status purpose.
+  * Note: To update the status of VCs and publish the updated status, additional
+    endpoints `setStatusLists` - `/credentials/status` and `publishStatusLists`
+    - `/credentials/publish` might also need to be specified.
 
-* `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite) on your DID resolver endpoint.
+* `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite)
+on your DID resolver endpoint.
 
 * `ecdsa-rdfc-2019` or `ecdsa-sd-2023` - These tags will run the
 [VC Data Integrity ECDSA Test Suite](https://github.com/w3c/vc-di-ecdsa-test-suite)
 on your issuer and verifier endpoints.
-  * Alongside this cryptosuite tag, you must also specify the `supportedEcdsaKeyTypes`
-  key parallel to `tags` listing the ECDSA key types that your implementation issues or
-  can verify. Currently, the test suite supports `P-256` and `P-384` ECDSA key types.
+  * Alongside this cryptosuite tag, you must also specify the
+  `supportedEcdsaKeyTypes` key parallel to `tags` listing the ECDSA key types
+  that your implementation issues or can verify. Currently, the test suite
+  supports `P-256` and `P-384` ECDSA key types.
 
 * `eddsa-rdfc-2022` - This tag will run the [VC Data Integrity EDDSA Test Suite](https://github.com/w3c/vc-di-eddsa-test-suite) on your issuer and verifier endpoints.
 
