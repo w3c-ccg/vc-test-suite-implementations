@@ -1,12 +1,12 @@
-# VC API Test Suite Implementations _(vc-api-test-suite-implementations)_
+# VC Test Suite Implementations _(vc-test-suite-implementations)_
 
-[![Build status](https://img.shields.io/github/workflow/status/w3c-ccg/vc-api-test-suite-implementations/Node.js%20CI)](https://github.com/w3c-ccg/vc-api-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
+[![Build status](https://img.shields.io/github/workflow/status/w3c-ccg/vc-test-suite-implementations/Node.js%20CI)](https://github.com/w3c-ccg/vc-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
 
 > Implementations list used across various W3C CCG test suites.
 
 ## Table of Contents
 
-- [VC API Test Suite Implementations _(vc-api-test-suite-implementations)_](#vc-api-test-suite-implementations-vc-api-test-suite-implementations)
+- [VC Test Suite Implementations _(vc-test-suite-implementations)_](#vc-test-suite-implementations-vc-test-suite-implementations)
   - [Table of Contents](#table-of-contents)
   - [Background](#background)
   - [Security](#security)
@@ -39,7 +39,7 @@ client secrets used for signing zcaps or HTTP Signature Headers.
 To install via NPM:
 
 ```
-npm install w3c-ccg/vc-api-test-suite-implementations
+npm install w3c-ccg/vc-test-suite-implementations
 ```
 
 ### Development
@@ -47,8 +47,8 @@ npm install w3c-ccg/vc-api-test-suite-implementations
 To install locally (for development):
 
 ```
-git clone https://github.com/w3c-ccg/vc-api-test-suite-implementations.git
-cd vc-api-test-suite-implementations
+git clone https://github.com/w3c-ccg/vc-test-suite-implementations.git
+cd vc-test-suite-implementations
 npm install
 ```
 
