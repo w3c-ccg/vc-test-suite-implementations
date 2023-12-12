@@ -98,14 +98,14 @@ section in that case).
 
 ### Testing locally
 
-If you need to test implementations for endpoints running locally you may add a
+If you need to test implementations for endpoints running locally, create a
 config file in the root dir of the test suite:
 
 ```
 .vcApiTestImplementationsConfig.cjs
 ```
 
-That file must be a common js module that exports an array of implementations:
+This file must be a CommonJS module that exports an array of implementations:
 
 ```js
 // file .vcApiTestImplementationsConfig.cjs
@@ -125,8 +125,14 @@ module.exports = [{
 }];
 ```
 
-Then update the test suite to filter the implementations with the tag you've
-specified in your config file and run the tests.
+To run the tests only against the localhost implementation, update the test
+suite to filter implementations using the specified tag in your config file.
+
+For instance, if your `.vcApiTestImplementationsConfig.cjs` looks like above
+in the `vc-api-issuer-test-suite`, you can adjust the
+[tag](https://github.com/w3c-ccg/vc-api-issuer-test-suite/blob/main/tests/10-issuer.js#L14)
+to filter the implementation by `localhost` rather than `vc-api` and
+then run the tests.
 
 ### Opting into a Test Suite
 
