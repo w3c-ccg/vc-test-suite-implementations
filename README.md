@@ -179,10 +179,9 @@ Example
 }
 ```
 
-
-2. If an issuer or verifier supports multiple VC signature types, you can assign
-multiple tags to them, eliminating the need for redundant entries to run against
-multiple test suites. For instance, if an issuer with the ID
+2. If you want your issuer or verifier to run against multiple test suites, you
+can assign multiple tags to them, eliminating the need for redundant entries.
+For instance, if an issuer with the ID
 https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR can be run with
 both the Status List 2021 and VC API test suites, a single entry with
 multiple tags can be used. This consolidated entry, containing tags for
