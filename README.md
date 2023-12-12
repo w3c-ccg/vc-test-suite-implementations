@@ -98,8 +98,8 @@ section in that case).
 
 ### Testing locally
 
-If you need to add implementations for endpoints running locally you may add a
-config file in the root dir of your test project:
+If you need to test implementations for endpoints running locally you may add a
+config file in the root dir of the test suite:
 
 ```
 .vcApiTestImplementationsConfig.cjs
@@ -124,6 +124,9 @@ module.exports = [{
   }]
 }];
 ```
+
+Then update the test suite to filter the implementations with the tag you've
+specified in your config file and run the tests.
 
 ### Opting into a Test Suite
 
