@@ -206,6 +206,12 @@ For Example:
 on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
 on your verifier.
 
+NOTE: Currently the vc api verifier test suite uses `Ed25519Signature2020` as
+the default signature for the mock VCs that are sent to the verifiers since it
+is most widely implemented. So, the verifier you add for `vc-api` must support
+verification of VCs with `Ed25519Signature2020` signature to pass verification
+tests.
+
 #### Status List 2021 Test Suite
 
 * `StatusList2021` and `Revocation`/`Suspension`- Combining the `StatusList2021`
