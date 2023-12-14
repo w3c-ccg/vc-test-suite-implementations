@@ -139,7 +139,7 @@ then run the tests.
 Please Note:
 
 1. Tags serve as identifiers to determine which test suites to run on your
-issuers and verifiers. Only the first issuer/verifier found with a specific
+issuers and verifiers. The first issuer/verifier found with a specific
 tag from your list will be run against the test suite, while subsequent issuers
 and verifiers bearing the same tag won't. This applies to most of the test
 suites associated with this implementations repository listed below.
