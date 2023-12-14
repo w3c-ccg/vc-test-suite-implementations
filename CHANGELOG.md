@@ -1,8 +1,9 @@
 # vc-test-suite-implementations Changelog
 
-## 2.0.0 - 2023-12-11
+## 2.0.0 - 2023-12-14
 
 ### Changed
+- **BREAKING**: Renamed package name to `vc-test-suite-implementations`.
 - Update `README.md` to add additional information about requirements for
   opting into a test suite.
 
