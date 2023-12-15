@@ -13,11 +13,11 @@
     "options": {
       "type": "Ed25519Signature2018"
     },
-    "tags": ["vc-api", "Ed25519Signature2018"]
+    "tags": ["vc-api"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://api.staging.refiner.neoflow.energy/credentials/verify",
-    "tags": ["vc-api", "Ed25519Signature2018"]
+    "tags": ["vc-api"]
   }]
 }
