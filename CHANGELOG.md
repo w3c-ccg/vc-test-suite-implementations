@@ -4,6 +4,7 @@
 
 ### Removed
 - Remove unsupported `Ed25519Signature2018` tag from implementations.
+- Remove `Mattr` from implementations list.
 
 ## 2.0.0 - 2023-12-14
 
