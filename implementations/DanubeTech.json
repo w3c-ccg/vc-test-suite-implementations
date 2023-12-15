@@ -5,7 +5,7 @@
     "id": "did:key:z6MksvTdeczd92YQ5W2V2gL9kXdRvD2AEiyJPoWieP95HUDo",
     "endpoint": "https://uniissuer.io/1.0/credentials/issue",
     "options": {
-      "type": "Ed25519Signature2018"
+      "type": "Ed25519Signature2020"
     },
     "tags": ["vc-api"]
   }, {
