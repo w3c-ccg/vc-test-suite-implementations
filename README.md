@@ -217,6 +217,10 @@ is most widely implemented. So, the verifier you add for `vc-api` must support
 verification of VCs with `Ed25519Signature2020` signature to pass verification
 tests.
 
+As of 2023, `Ed25519Signature2018` is no longer supported, so please update
+your existing implementations to use `Ed25519Signature2020` if you were
+previously using `Ed25519Signature2018`.
+
 #### Status List 2021 Test Suite
 
 * `StatusList2021` and `Revocation`/`Suspension`- Combining the `StatusList2021`
