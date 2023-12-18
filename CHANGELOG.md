@@ -1,6 +1,6 @@
 # vc-test-suite-implementations Changelog
 
-## 2.1.0 - 2023-12-15
+## 2.1.0 - 2023-12-18
 
 ### Removed
 - Remove unsupported `Ed25519Signature2018` tag from implementations.
