@@ -3,7 +3,7 @@
 ## 2.1.0 - 2023-12-15
 
 ### Removed
-- Remove tags unsupported `Ed25519Signature2018` tag from implementations.
+- Remove unsupported `Ed25519Signature2018` tag from implementations.
 
 ## 2.0.0 - 2023-12-14
 
