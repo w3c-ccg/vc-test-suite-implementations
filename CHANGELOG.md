@@ -1,5 +1,11 @@
 # vc-test-suite-implementations Changelog
 
+## 3.0.0 - 2023-12-27
+
+### Changed
+- **BREAKING**: Rename `vcApiTestImplementationsConfig.cjs` config for testing
+  localhost implementations to `localImplementationsConfig.cjs`.
+
 ## 2.1.0 - 2023-12-18
 
 ### Removed
