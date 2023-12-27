@@ -14,7 +14,7 @@ const dir = requireDir('./');
 const getLocalImplementations = () => {
   try {
     const path = join(
-      appRoot.toString(), '.vcApiTestImplementationsConfig.cjs');
+      appRoot.toString(), '.localImplementationsConfig.cjs');
     return require(path);
   } catch(e) {
     if(e?.code === 'MODULE_NOT_FOUND') {
