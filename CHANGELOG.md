@@ -1,6 +1,6 @@
 # vc-test-suite-implementations Changelog
 
-## 3.0.0 - 2023-12-27
+## 3.0.0 - 2024-01-02
 
 ### Changed
 - **BREAKING**: Rename `.vcApiTestImplementationsConfig.cjs` config for testing
