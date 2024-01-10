@@ -183,9 +183,9 @@ Example
 can assign multiple tags to them, eliminating the need for redundant entries.
 For instance, if an issuer with the ID
 https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR can be run with
-both the Status List 2021 and VC API test suites, a single entry with
+both the VC Bitstring Status List and VC API test suites, a single entry with
 multiple tags can be used. This consolidated entry, containing tags for
-both VC API and Status List 2021 test suites, ensures that the issuer and
+both VC API and VC Bitstring Status List test suites, ensures that the issuer and
 the verifier will be run against both test suites. Here is an example of how to
 structure the entry:
 
@@ -195,7 +195,7 @@ For Example:
   "issuers": [{
     "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
     "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
-    "tags": ["vc-api", "StatusList2021", "Suspension"]
+    "tags": ["vc-api", "BitstringStatusList", "Suspension"]
   }],
   "verifiers": [{
     "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
@@ -223,13 +223,13 @@ previously using `Ed25519Signature2018`.
 
 #### Status List 2021 Test Suite
 
-* `StatusList2021` and `Revocation`/`Suspension`- Combining the `StatusList2021`
-tag with `Revocation` or `Suspension` tags will run the
-[Status List 2021 tests](https://github.com/w3c-ccg/status-list-2021-test-suite)
+* `BitstringStatusList ` and `Revocation`/`Suspension`- Combining the
+`BitstringStatusList` tag with `Revocation` or `Suspension` tags will run the
+[Bitstring Status List tests](https://github.com/w3c-ccg/vc-bitstring-status-list-test-suite)
 on your issuer and/or verifier.
-  * Adding the `Revocation` tag alongside `StatusList2021` runs tests for
+  * Adding the `Revocation` tag alongside `BitstringStatusList` runs tests for
   issuers or verifiers issuing/verifying VCs with the revocation status purpose.
-  * Adding the `Suspension` tag alongside `StatusList2021` runs tests for
+  * Adding the `Suspension` tag alongside `BitstringStatusList` runs tests for
   issuers or verifiers issuing/verifying VCs with the suspension status purpose.
   * Note: To update the status of VCs and publish the updated status, additional
   endpoints `setStatusLists` - `/credentials/status` and `publishStatusLists`
