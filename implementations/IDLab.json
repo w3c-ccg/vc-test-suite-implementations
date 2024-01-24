@@ -20,5 +20,10 @@
       "type": "BbsBlsSignature2020"
     },
     "tags": ["vc-api"]
+  }],
+  "didResolvers": [{
+    "id": "",
+    "endpoint": "https://vc.idlab.app/1.0/resolve/identifiers",
+    "tags": ["did-key"]
   }]
 }
