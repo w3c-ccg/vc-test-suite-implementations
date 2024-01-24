@@ -1,0 +1,24 @@
+{
+  "name": "IDLab",
+  "implementation": "Digital Trust Testbench",
+  "verifiers": [{
+    "id": "https://vc.idlab.app",
+    "endpoint": "https://vc.idlab.app/credentials/verify",
+    "tags": ["vc-api"]
+  }],
+  "issuers": [{
+    "id": "did:key:z6MkssSXBRQSLTRrSeaUqZsXGw8rKbeTtaRC3WLuLAEbspNS",
+    "endpoint": "https://vc.idlab.app/credentials/issue",
+    "options": {
+      "type": "Ed25519Signature2020"
+    },
+    "tags": ["vc-api"]
+  },{
+    "id": "did:key:zUC7CpkJ8r94kGsEZDzMDih5TJdnuzrbdt2fAAKJHWFuNcqKFZ71fHwo7ZncTBZ43nisGgoYWbTp9JC7hKmRdCN6Mz5sEXZe4vFcJCdgaAhqamdQPEZCc5snD3MLT5rwHuWyQx7",
+    "endpoint": "https://vc.idlab.app/credentials/issue",
+    "options": {
+      "type": "BbsBlsSignature2020"
+    },
+    "tags": ["vc-api"]
+  }]
+}
