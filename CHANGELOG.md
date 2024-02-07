@@ -1,5 +1,11 @@
 # vc-test-suite-implementations Changelog
 
+## 4.0.0 - 2024-01-TBD
+
+### Changed
+- **BREAKING**: Rename the tag to run Bitstring Status List test suite from
+  `StatusList2021` to `BitstringStatusList`.
+
 ## 3.0.0 - 2024-01-02
 
 ### Changed
