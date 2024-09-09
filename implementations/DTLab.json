@@ -1,0 +1,16 @@
+{
+  "name": "DTLab",
+  "implementation": "DTT",
+  "verifiers": [{
+    "id": "did:key:z6MkssSXBRQSLTRrSeaUqZsXGw8rKbeTtaRC3WLuLAEbspNS",
+    "endpoint": "https://api.dtlab-labcn.app/credentials/verify",
+    "options": {},
+    "tags": []
+  }],
+  "issuers": [{
+    "id": "did:key:z6MkssSXBRQSLTRrSeaUqZsXGw8rKbeTtaRC3WLuLAEbspNS",
+    "endpoint": "https://api.dtlab-labcn.app/credentials/issue",
+    "options": {},
+    "tags": []
+  }]
+}
