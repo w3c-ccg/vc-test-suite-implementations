@@ -1,0 +1,18 @@
+{
+  "name": "ACA-py",
+  "implementation": "ACA-Py",
+  "verifiers": [
+    {
+      "id": "https://aca-py.test-suite.app",
+      "endpoint": "https://aca-py.test-suite.app/vc/credentials/verify",
+      "tags": ["vc-api"]
+    }
+  ],
+  "issuers": [
+    {
+      "id": "did:key:z6MkmiYjSToh5NdEf9xNuh5mDGXGYinzcAy1s4feRHtkEQJr",
+      "endpoint": "https://aca-py.test-suite.app/vc/credentials/issue",
+      "tags": ["vc-api"]
+    }
+  ]
+}
