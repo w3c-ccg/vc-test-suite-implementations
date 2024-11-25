@@ -1,0 +1,23 @@
+{
+  "name": "Trential",
+  "implementation": "Indisi",
+  "issuers": [
+    {
+      "id": "did:key:z6MkmcDsJSgrET1sZz7shhvP7rQoeLYfiVTpz2nkDPdvL5KQ",
+      "endpoint": "https://api.trential.dev/indisi-vc/issuer/credentials/issue",
+      "tags": [
+        "vc-api",
+        "JWT"
+      ]
+    }
+  ],
+  "verifiers": [
+    {
+      "endpoint": "https://api.trential.dev/indisi-vc/verifier/credentials/verify",
+      "tags": [
+        "vc-api",
+        "JWT"
+      ]
+    }
+  ]
+}
