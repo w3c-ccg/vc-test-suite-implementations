@@ -2,8 +2,8 @@
   "name": "Digital Bazaar",
   "implementation": "Veres (Q/A)",
   "issuers": [{
-    "id": "https://issuer.qa.veres.app/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR",
-    "endpoint": "https://issuer.qa.veres.app/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR/credentials/issue",
+    "id": "did:key:z6MkptjaoxjyKQFSqf1dHXswP6EayYhPQBYzprVCPmGBHz9S",
+    "endpoint": "https://vc2.veresissuer.dev/issuers/z1AAULmFX5PGL2vooL168HDof/credentials/issue",
     "zcap": {
       "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:eec0d326-0ffb-4a3c-a46f-0a3f8955c43f\",\"controller\":\"did:key:z6MkptjaoxjyKQFSqf1dHXswP6EayYhPQBYzprVCPmGBHz9S\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fvc2.veresissuer.dev%2Fissuers%2Fz1AAULmFX5PGL2vooL168HDof\",\"invocationTarget\":\"https://vc2.veresissuer.dev/issuers/z1AAULmFX5PGL2vooL168HDof/credentials/issue\",\"expires\":\"2025-12-01T17:41:26Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2024-12-01T17:41:28Z\",\"verificationMethod\":\"did:key:z6Mkhy6eh6QBZPq3Jjr75FfcMDRZRvzoDJ4FpiAQMjJfCXwo#z6Mkhy6eh6QBZPq3Jjr75FfcMDRZRvzoDJ4FpiAQMjJfCXwo\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fvc2.veresissuer.dev%2Fissuers%2Fz1AAULmFX5PGL2vooL168HDof\"],\"proofValue\":\"z4GW57Yh2Z6qLfVn3qwxFVEq8U3qoEUBsUQiex9aNMhwPve2WW3Ynju7s48xgQeeZk5BaRZamPpDkrWfavp4gdtH5\"}}",
       "keySeed": "KEY_SEED_DB"
