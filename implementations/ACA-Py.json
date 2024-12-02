@@ -3,14 +3,14 @@
   "implementation": "ACA-Py",
   "verifiers": [
     {
-      "id": "did:key:z6MkkQivZZ25XQRsmF6br5cbRYuQqn18PigKCaLHi8qSF251",
+      "id": "did:key:z6Mkj8h3kzWZrPiucoyY9LGCTpXhCqBoX3doDmHz5MaPxnvi",
       "endpoint": "https://agent.opsec.id/vc/credentials/verify",
       "tags": ["vc-api"]
     }
   ],
   "issuers": [
     {
-      "id": "did:key:z6MkkQivZZ25XQRsmF6br5cbRYuQqn18PigKCaLHi8qSF251",
+      "id": "did:key:z6Mkj8h3kzWZrPiucoyY9LGCTpXhCqBoX3doDmHz5MaPxnvi",
       "endpoint": "https://agent.opsec.id/vc/credentials/issue",
       "tags": ["vc-api"]
     }
