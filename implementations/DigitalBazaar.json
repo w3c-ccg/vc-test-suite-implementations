@@ -11,10 +11,10 @@
     "tags": ["vc-api"]
   }],
    "verifiers": [{
-    "id": "https://vc2.veresverifier.dev/verifiers/z19zdEaEqZ62Eo1iGYmAwCSE4",
-    "endpoint": "https://vc2.veresverifier.dev/verifiers/z19zdEaEqZ62Eo1iGYmAwCSE4/credentials/verify",
+    "id": "https://vc2.veresverifier.dev/verifiers/z19oNgowF5rQkDPiajxdD1uTG",
+    "endpoint": "https://vc2.veresverifier.dev/verifiers/z19oNgowF5rQkDPiajxdD1uTG/credentials/verify",
     "zcap": {
-      "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:7636d4bc-83e1-4654-9350-ef7e5f3fec1d\",\"controller\":\"did:key:z6MksNZwi2r6Qxjt3MYLrrZ44gs2fauzgv1dk4E372bNVjtc\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fvc2.veresverifier.dev%2Fverifiers%2Fz19zdEaEqZ62Eo1iGYmAwCSE4\",\"invocationTarget\":\"https://vc2.veresverifier.dev/verifiers/z19zdEaEqZ62Eo1iGYmAwCSE4/credentials/verify\",\"expires\":\"2025-12-02T21:45:30Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2024-12-02T21:45:31Z\",\"verificationMethod\":\"did:key:z6MkumCWgmyKzTzk37WMivGhKLYZYneo4McR7z9tC8tiB6Ln#z6MkumCWgmyKzTzk37WMivGhKLYZYneo4McR7z9tC8tiB6Ln\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fvc2.veresverifier.dev%2Fverifiers%2Fz19zdEaEqZ62Eo1iGYmAwCSE4\"],\"proofValue\":\"z5trWGTbdSN1RkHmvfLgiTQrP6JnCtgk7vdA1DqdadPCYN1in7P9AMKA1sYT81QCgQLoFMGMsimMFC8QFUbi8Du4K\"}}",
+      "capability": "{\"@context\":[\"https://w3id.org/zcap/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"urn:uuid:5450eadb-db01-40c8-ab70-ff621e18c241\",\"controller\":\"did:key:z6MkptjaoxjyKQFSqf1dHXswP6EayYhPQBYzprVCPmGBHz9S\",\"parentCapability\":\"urn:zcap:root:https%3A%2F%2Fvc2.veresverifier.dev%2Fverifiers%2Fz19oNgowF5rQkDPiajxdD1uTG\",\"invocationTarget\":\"https://vc2.veresverifier.dev/verifiers/z19oNgowF5rQkDPiajxdD1uTG/credentials/verify\",\"expires\":\"2025-12-03T21:54:56Z\",\"proof\":{\"type\":\"Ed25519Signature2020\",\"created\":\"2024-12-03T21:54:57Z\",\"verificationMethod\":\"did:key:z6MkkhfTyQ4qNWARZRRKu93KTUF6sBJvo2rDxp7BVrFLwK5L#z6MkkhfTyQ4qNWARZRRKu93KTUF6sBJvo2rDxp7BVrFLwK5L\",\"proofPurpose\":\"capabilityDelegation\",\"capabilityChain\":[\"urn:zcap:root:https%3A%2F%2Fvc2.veresverifier.dev%2Fverifiers%2Fz19oNgowF5rQkDPiajxdD1uTG\"],\"proofValue\":\"z5ChS4xi1uuswGW49HCPT6Kb3XhwcZH9kcosjQXKDQ8ArbdV353JRZ9rdbf78tVaoTy5JCLRU417L6wonH1ygnCV\"}}",
       "keySeed": "KEY_SEED_DB"
     },
     "tags": ["vc-api"]
