@@ -221,20 +221,6 @@ As of 2023, `Ed25519Signature2018` is no longer supported, so please update
 your existing implementations to use `Ed25519Signature2020` if you were
 previously using `Ed25519Signature2018`.
 
-#### Status List 2021 Test Suite
-
-* `BitstringStatusList ` and `Revocation`/`Suspension`- Combining the
-`BitstringStatusList` tag with `Revocation` or `Suspension` tags will run the
-[Bitstring Status List tests](https://github.com/w3c-ccg/vc-bitstring-status-list-test-suite)
-on your issuer and/or verifier.
-  * Adding the `Revocation` tag alongside `BitstringStatusList` runs tests for
-  issuers or verifiers issuing/verifying VCs with the revocation status purpose.
-  * Adding the `Suspension` tag alongside `BitstringStatusList` runs tests for
-  issuers or verifiers issuing/verifying VCs with the suspension status purpose.
-  * Note: To update the status of VCs and publish the updated status, additional
-  endpoints `setStatusLists` - `/credentials/status` and `publishStatusLists`
-  - `/credentials/publish` may also need to be specified.
-
 #### DID Key Test Suite
 
 * `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite)
