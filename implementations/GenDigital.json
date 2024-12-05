@@ -1,0 +1,18 @@
+{
+  "name": "Gen Digital",
+  "implementation": "Gen Digital",
+  "issuers": [
+    {
+      "id": "did:web:fd5e2e37-8ee6-424e-92df-28d34fe4e0a5.did-dev3.dev.dts-dsa.com",
+      "endpoint": "https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/78980eb4-3862-4a78-8b65-b158b580aeec/v1.latest/credentials/issue",
+      "tags": ["vc-api"]
+    }
+  ],
+  "verifiers": [
+    {
+      "id": "did:web:481ca770-fca8-4425-97be-96f057d6952a.did-dev3.dev.dts-dsa.com",
+      "endpoint": "https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/verifier/profiles/25c3a9cd-2a45-418e-9200-f7e8a24d1a43/v1.latest/credentials/verify",
+      "tags": ["vc-api"]
+    }
+  ]
+}
