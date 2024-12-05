@@ -13,11 +13,6 @@
       "id": "did:web:481ca770-fca8-4425-97be-96f057d6952a.did-dev3.dev.dts-dsa.com",
       "endpoint": "https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/verifier/profiles/25c3a9cd-2a45-418e-9200-f7e8a24d1a43/v1.latest/credentials/verify",
       "tags": ["vc-api"]
-    },
-    {
-      "id": "did:web:481ca770-fca8-4425-97be-96f057d6952a.did-dev3.dev.dts-dsa.com",
-      "endpoint": "https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/f3c5e456-2528-4821-9516-e062392f6ead/v1.latest/credentials/issue",
-      "tags": ["BitstringStatusList", "Revocation"]
     }
   ]
 }
