@@ -1,0 +1,25 @@
+{
+  "name": "Procivis One Core",
+  "implementation": "Procivis One Core",
+  "issuers": [
+    {
+      "id": "did:key:zDnaebiWvYW4sEFcncp6sLRmGPio1tVaXSDBwnYELtyvwpnYE",
+      "endpoint": "https://canivc.core.dev.procivis-one.com/vc-api/credentials/issue",
+      "tags": [ "vc-api" ]
+    }
+  ],
+  "verifiers": [
+    {
+      "id": "did:key:zDnaebiWvYW4sEFcncp6sLRmGPio1tVaXSDBwnYELtyvwpnYE",
+      "endpoint": "https://canivc.core.dev.procivis-one.com/vc-api/credentials/verify",
+      "tags": [ "vc-api" ]
+    }
+  ],
+  "didResolvers": [
+    {
+      "id": "resolver",
+      "endpoint": "https://canivc.core.dev.procivis-one.com/vc-api/identifiers",
+      "tags": [ "did-key" ]
+    }
+  ]
+}
