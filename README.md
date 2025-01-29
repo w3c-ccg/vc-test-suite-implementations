@@ -27,12 +27,14 @@ Verifiable Credentials test suites (see [Tags](#tags) for the full list).
 ## Background
 
 Implementations added to this package are tested against various test suites
-in order to demonstrate interoperability.
+[listed below](#tags) in order to demonstrate interoperability.
 
 ## Security
 
-Please do not commit any sensitive materials such as oauth2 client secret or
-client secrets used for signing zcaps or HTTP Signature Headers.
+Please do not commit any sensitive materials such as oauth2 client secrets or
+private key information used for signing
+[Authorization Capabilities](https://w3c-ccg.github.io/zcap-spec/) or
+[HTTP Message Signatures](https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-08.html).
 
 ## Install
 
@@ -42,7 +44,7 @@ client secrets used for signing zcaps or HTTP Signature Headers.
 
 To install via NPM:
 
-```
+```sh
 npm install w3c-ccg/vc-test-suite-implementations
 ```
 
@@ -50,7 +52,7 @@ npm install w3c-ccg/vc-test-suite-implementations
 
 To install locally (for development):
 
-```
+```sh
 git clone https://github.com/w3c-ccg/vc-test-suite-implementations.git
 cd vc-test-suite-implementations
 npm install
@@ -58,8 +60,7 @@ npm install
 
 ## Usage
 
-
-### Adding a new implementation
+#### Adding a new implementation
 Please add implementations to the `./implementations` directory.
 Implementation configuration files are expressed in JSON and use roughly the
 following form:
@@ -95,10 +96,19 @@ following form:
 }
 ```
 
-Please note: implementations may have security using oauth2 or zcaps, but not
-both.
-Implementations may also contain no security (do not add a OAUTH2 or ZCAP
-section in that case).
+Please note: implementations may specify authorization parameters for oauth2 or
+zcaps, but not both. Implementations may also not specify any authorization
+parameters, in which case they do not specify `oauth2` or `zcap` properties.
+
+Please check specific test suite READMEs for further details on implementation properties and endpoints.
+Test suites MAY specify additional properties and features for endpoints such as
+mandatory JSON-LD contexts, keyTypes settings, additional tags for specific tests such as Enveloped Proofs,
+and supported VC Data Model versions. In most cases, endpoints are expected to: be capable
+of using the test suite API; be capable of signing and/or verifying using `did:key`; and support the following contexts:
+
+- https://www.w3.org/ns/credentials/examples/v2
+- https://www.w3.org/2018/credentials/v1
+- https://www.w3.org/ns/credentials/v2
 
 ### Testing locally
 
