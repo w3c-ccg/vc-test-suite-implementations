@@ -1,24 +1,28 @@
-# VC Test Suite Implementations _(vc-test-suite-implementations)_
+<!--
+Copyright 2024 Digital Bazaar, Inc.
 
-[![Build status](https://img.shields.io/github/workflow/status/w3c-ccg/vc-test-suite-implementations/Node.js%20CI)](https://github.com/w3c-ccg/vc-test-suite-implementations/actions?query=workflow%3A%22Node.js+CI%22)
+SPDX-License-Identifier: BSD-3-Clause
+-->
 
-> Implementations list used across various W3C CCG test suites.
+# W3C Credentials Community Group VC Test Suite Implementations
+
+This implementations list is used by the various
+[W3C Credentials Community Group](https://www.w3.org/groups/cg/credentials/)
+Verifiable Credentials test suites (see [Tags](#tags) for the full list).
 
 ## Table of Contents
 
-- [VC Test Suite Implementations _(vc-test-suite-implementations)_](#vc-test-suite-implementations-vc-test-suite-implementations)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Security](#security)
-  - [Install](#install)
-    - [NPM](#npm)
-    - [Development](#development)
-  - [Usage](#usage)
-    - [Adding a new implementation](#adding-a-new-implementation)
-    - [Testing locally](#testing-locally)
-    - [Opting into a Test Suite](#opting-into-a-test-suite)
-  - [Contribute](#contribute)
-  - [License](#license)
+- [Background](#background)
+- [Security](#security)
+- [Install](#install)
+  - [NPM](#npm)
+  - [Development](#development)
+- [Usage](#usage)
+  - [Adding a new implementation](#adding-a-new-implementation)
+  - [Testing locally](#testing-locally)
+  - [Tags](#tags)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## Background
 
@@ -134,7 +138,7 @@ in the `vc-api-issuer-test-suite`, you can adjust the
 to filter the implementation by `localhost` rather than `vc-api` and
 then run the tests.
 
-### Opting into a Test Suite
+### Tags
 
 Please Note:
 
