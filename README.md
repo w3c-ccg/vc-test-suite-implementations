@@ -110,43 +110,34 @@ of using the test suite API; be capable of signing and/or verifying using `did:k
 - https://www.w3.org/2018/credentials/v1
 - https://www.w3.org/ns/credentials/v2
 
-### Testing locally
+#### Testing locally
 
-If you need to test implementations for endpoints running locally, create a
-config file in the root dir of the test suite:
-
-```
-.localImplementationsConfig.cjs
-```
-
-This file must be a CommonJS module that exports an array of implementations:
+To test implementations with endpoints running locally, create a configuration file named
+`localConfig.cjs` in the root directory of the test suite. `localConfig.cjs` should export
+a json object. Add the property `implementations` to the exported object. `implementations`
+should be an array of objects such as the one below:
 
 ```js
-// file .localImplementationsConfig.cjs
-module.exports = [{
-  "name": "My Company",
-  "implementation": "My Implementation Name",
-  "issuers": [{
-    "id": "urn:uuid:my:implementation:issuer:id",
-    "endpoint": "https://localhost:40443/issuers/foo/credentials/issue",
-    "tags": ["vc-api", "localhost"]
-  }],
-  "verifiers": [{
-    "id": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
-    "endpoint": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
-    "tags": ["vc-api", "localhost"]
-  }]
-}];
+// localConfig.cjs defining local implementations
+module.exports = {
+  "implementations": [{
+    "name": "My Company",
+    "implementation": "My Implementation Name",
+    "issuers": [{
+      "id": "urn:uuid:my:implementation:issuer:id",
+      "endpoint": "https://localhost:40443/issuers/foo/credentials/issue",
+      "tags": ["eddsa-rdfc-2022"]
+    }],
+    "verifiers": [{
+      "id": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
+      "endpoint": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+      "tags": ["eddsa-rdfc-2022"]
+    }]
+  }];
+};
 ```
 
-To run the tests only against the localhost implementation, update the test
-suite to filter implementations using the specified tag in your config file.
-
-For instance, if your `.localImplementationsConfig.cjs` looks like above
-in the `vc-api-issuer-test-suite`, you can adjust the
-[tag](https://github.com/w3c-ccg/vc-api-issuer-test-suite/blob/main/tests/10-issuer.js#L14)
-to filter the implementation by `localhost` rather than `vc-api` and
-then run the tests.
+After adding the config file, only implementations in `localConfig.cjs` will run.
 
 ### Tags
 
