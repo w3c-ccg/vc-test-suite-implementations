@@ -20,6 +20,7 @@ Verifiable Credentials test suites (see [Tags](#tags) for the full list).
 - [Usage](#usage)
   - [Adding a new implementation](#adding-a-new-implementation)
   - [Testing locally](#testing-locally)
+  - [Test Suite Settings](#test-suite-settings)
   - [Tags](#tags)
 - [Contribute](#contribute)
 - [License](#license)
@@ -138,6 +139,43 @@ module.exports = {
 ```
 
 After adding the config file, only implementations in `localConfig.cjs` will run.
+
+### Test Suite Settings
+
+Additional test suite runtime configuration can be done via the `settings` key
+in a `localConfig.cjs`. The current global settings are:
+
+  * `enableInteropTests` - enable/disable the cross-implementation "interop" tests
+  * `testAllImplementations` - enable/disable testing _all_ implementations (not
+    just what's in `localConfig.cjs`)
+
+Both of these settings are `false` when `localConfig.cjs` is present, but may be
+overridden as below:
+
+```js
+module.exports = {
+  "settings": {
+    // overriding the default, false, for local testing
+    "enableInteropTests": true,
+    "testAllImplementations": true
+  },
+  "implementations": [{
+    "name": "My Company",
+    "implementation": "My Implementation Name",
+    "issuers": [{
+      "id": "urn:uuid:my:implementation:issuer:id",
+      "endpoint": "https://localhost:40443/issuers/foo/credentials/issue",
+      "tags": ["eddsa-rdfc-2022"]
+    }],
+    "verifiers": [{
+      "id": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR",
+      "endpoint": "https://localhost:40443/verifiers/z19uokPn3b1Z4XDbQSHo7VhFR/credentials/verify",
+      "tags": ["eddsa-rdfc-2022"]
+    }]
+  }, {
+    // Add additional implementations as needed
+  }];
+```
 
 ### Tags
 
