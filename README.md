@@ -141,84 +141,17 @@ After adding the config file, only implementations in `localConfig.cjs` will run
 
 ### Tags
 
-Please Note:
+Tags tell the test suites which implementations' endpoints to run the test suites against.
 
-1. Tags serve as identifiers to determine which test suites to run on your
-issuers and verifiers. The first issuer/verifier found with a specific
-tag from your list will be run against the test suite, while subsequent issuers
-and verifiers bearing the same tag won't. This applies to most of the test
-suites associated with this implementations repository listed below.
+* `vc-api` - This tag will run the
+[VC API Issuer test suite](https://github.com/w3c-ccg/vc-api-issuer-test-suite)
+on an `issuer` endpoint and the
+[VC API Verifier test suite](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
+on a `verifier` endpoint.
 
-For instance, if you have added the tag `vc-api` to all your issuers and
-verifiers to run them with vc api issuer and verifier test suites, only the
-first match will be used in the test suites. In the sample configuration below,
-only the issuer and verifier with the IDs
-https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR and
-https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR will be selected.
-Therefore, please avoid adding duplicate tags.
-
-Example
-```js
-// Only the first match https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR
-// and https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR will be
-// run against the VC API issuer and verifier test suites.
-{
-  "issuers": [{
-    "id": "https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR",
-    "endpoint": "https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR/credentials/issue",
-    "tags": ["vc-api"]
-  }, {
-    "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
-    "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
-    "tags": ["vc-api"]
-  }],
-  "verifiers": [{
-    "id": "https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR",
-    "endpoint": "https://product.example.com/verifiers/z1AEwLo7tZ3TrsPgRcgLJqQvR/credentials/verify",
-    "tags": ["vc-api"]
-  }, {
-    "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
-    "endpoint": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/verify",
-    "tags": ["vc-api"]
-  }]
-}
-```
-
-2. If you want your issuer or verifier to run against multiple test suites, you
-can assign multiple tags to them, eliminating the need for redundant entries.
-For instance, if an issuer with the ID
-https://product.example.com/issuers/z1AEwLo7tZ3TrsPgRcgLJqQvR can be run with
-both the VC Bitstring Status List and VC API test suites, a single entry with
-multiple tags can be used. This consolidated entry, containing tags for
-both VC API and VC Bitstring Status List test suites, ensures that the issuer and
-the verifier will be run against both test suites. Here is an example of how to
-structure the entry:
-
-For Example:
-```js
-{
-  "issuers": [{
-    "id": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
-    "endpoint": "https://product.example.com/issuers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/issue",
-    "tags": ["vc-api", "BitstringStatusList", "Suspension"]
-  }],
-  "verifiers": [{
-    "id": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU",
-    "endpoint": "https://product.example.com/verifiers/z4Rq7N1lT6zVwFgXk8JYdCcKpU/credentials/verify",
-    "tags": ["vc-api"]
-  }]
-}
-```
-
-#### VC API Issuer and Verifier Test Suites
-
-* `vc-api` - This tag will run the [vc-api-issuer tests](https://github.com/w3c-ccg/vc-api-issuer-test-suite)
-on your issuer and the [vc-api-verifier tests](https://github.com/w3c-ccg/vc-api-verifier-test-suite)
-on your verifier.
-
-NOTE: Currently the vc api verifier test suite uses `Ed25519Signature2020` as
+NOTE: Currently the VC API Verifier test suite uses `Ed25519Signature2020` as
 the default signature for the mock VCs that are sent to the verifiers since it
-is most widely implemented. So, the verifier you add for `vc-api` must support
+is widely implemented. So, the verifier you add for `vc-api` must support
 verification of VCs with `Ed25519Signature2020` signature to pass verification
 tests.
 
@@ -226,10 +159,9 @@ As of 2023, `Ed25519Signature2018` is no longer supported, so please update
 your existing implementations to use `Ed25519Signature2020` if you were
 previously using `Ed25519Signature2018`.
 
-#### DID Key Test Suite
-
-* `did-key` - This tag will run the [DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite)
-on your DID resolver endpoint.
+* `did-key` - This tag will run the
+[DID Key Test Suite](https://github.com/w3c-ccg/did-key-test-suite)
+on a DID resolver endpoint.
 
 ## Contribute
 
