@@ -165,13 +165,10 @@ on a DID resolver endpoint.
 
 ## Contribute
 
-See [the contribute file](https://github.com/digitalbazaar/bedrock/blob/master/CONTRIBUTING.md)!
+See [the CONTRIBUTING.md file](CONTRIBUTING.md).
 
-PRs accepted.
-
-If editing the Readme, please conform to the
-[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+Pull Requests are welcome!
 
 ## License
 
-[New BSD License (3-clause)](LICENSE) © Digital Bazaar
+[BSD-3-Clause](LICENSE) Copyright 2022-2024, World Wide Web Consortium
