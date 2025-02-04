@@ -1,5 +1,5 @@
 <!--
-Copyright 2024 Digital Bazaar, Inc.
+Copyright 2025 Digital Bazaar, Inc.
 
 SPDX-License-Identifier: BSD-3-Clause
 -->
@@ -209,4 +209,5 @@ Pull Requests are welcome!
 
 ## License
 
-[BSD-3-Clause](LICENSE) Copyright 2022-2024, World Wide Web Consortium
+[BSD-3-Clause](LICENSE) Copyright 2022-2025, World Wide Web Consortium and
+Digital Bazaar, Inc.
