@@ -1,3 +1,9 @@
+<!--
+Copyright 2023 - 2024 Digital Bazaar, Inc.
+
+SPDX-License-Identifier: BSD-3-Clause
+-->
+
 # vc-test-suite-implementations Changelog
 
 ## 4.0.0 - 2024-01-TBD
