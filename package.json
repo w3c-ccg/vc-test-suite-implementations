@@ -1,13 +1,18 @@
 {
   "name": "vc-test-suite-implementations",
   "version": "0.0.1",
-  "description": "",
+  "description": "W3C Credentials Community Group test suite implementations",
   "homepage": "https://github.com/w3c-ccg/vc-test-suite-implementations",
   "author": {
+    "name": "W3C Verifiable Credentials Working Group",
+    "email": "public-vc-wg@w3.org",
+    "url": "https://www.w3.org/groups/wg/vc/"
+  },
+  "contributors": [{
     "name": "Digital Bazaar, Inc.",
     "email": "support@digitalbazaar.com",
     "url": "https://digitalbazaar.com/"
-  },
+  }],
   "type": "module",
   "main": "./lib/main.js",
   "repository": {
@@ -16,7 +21,7 @@
   },
   "bugs": {
     "url": "https://github.com/w3c-ccg/vc-test-suite-implementations/issues",
-    "email": "support@digitalbazaar.com"
+    "email": "public-credentials@w3.org"
   },
   "license": "BSD-3-Clause",
   "files": [
@@ -61,8 +66,8 @@
     "node": ">=18"
   },
   "keywords": [
-    "Decentralized",
-    "Linked Data"
+    "W3C",
+    "Verifiable Credentials"
   ],
   "scripts": {
     "test": "npm run test-node && npm run lint",
