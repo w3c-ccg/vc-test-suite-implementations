@@ -1,0 +1,11 @@
+{
+  "name": "OWF",
+  "implementation": "OWF Labs - Node.js",
+  "issuers": [
+    {
+      "id": "did:key:z6MksoRPRqnMWiivV4weRGGS9SiHXuqfJEYu95EiYtbvBxW6",
+      "endpoint": "https://w3c-test-suite.vc-api-owf.dev/v1/vc-api/credentials/issue",
+      "tags": ["vc-api"]
+    }
+  ]
+}
