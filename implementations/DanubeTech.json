@@ -24,6 +24,6 @@
   "didResolvers": [{
     "id": "",
     "endpoint": "https://dev.uniresolver.io/1.0/identifiers",
-    "tags": ["did-key"]
+    "tags": ["did-key", "did-resolution"]
   }]
 }
