@@ -1,6 +1,6 @@
 {
-  "name": "Digital Bazaar",
-  "implementation": "Veres (Q/A)",
+  "name": "Digital Bazaar, Inc.",
+  "implementation": "Veres (Test Suites)",
   "issuers": [{
     "id": "did:key:z6MkptjaoxjyKQFSqf1dHXswP6EayYhPQBYzprVCPmGBHz9S",
     "endpoint": "https://vc2.veresissuer.dev/issuers/z1AAULmFX5PGL2vooL168HDof/credentials/issue",
