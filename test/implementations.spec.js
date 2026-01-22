@@ -59,11 +59,14 @@ describe('Loading implementations', () => {
   describe('Implementations using ZCAPs', () => {
     rawImplementations.forEach(implementation => {
       Object.keys(implementation)
-        .filter(key => Array.isArray(implementation[key]))
+        .filter(key => {
+          return Array.isArray(implementation[key]) &&
+            implementation[key].filter(config =>
+              config.zcap?.capability).length > 0;
+        })
         .forEach(implementationType => {
           describe(`${implementation.name} - ${implementationType}`, () => {
             implementation[implementationType]
-              ?.filter(({zcap}) => zcap?.capability)
               .forEach(config => {
                 it.allowFail(`ZCAP should not be expired for ${config.id}`,
                   () => {
