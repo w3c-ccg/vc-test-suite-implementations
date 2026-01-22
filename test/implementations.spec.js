@@ -68,7 +68,7 @@ describe('Loading implementations', () => {
           describe(`${implementation.name} - ${implementationType}`, () => {
             implementation[implementationType]
               .forEach(config => {
-                it.allowFail(`ZCAP should not be expired for ${config.id}`,
+                it.allowFail(`ZCAP should not be expired for \`${config.id}\``,
                   () => {
                     const expiration = JSON.parse(config.zcap.capability)
                       .expires;

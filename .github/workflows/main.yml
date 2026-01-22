@@ -32,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint]
     timeout-minutes: 10
+    permissions:
+      issues: write
     strategy:
       matrix:
         node-version: [24.x]
@@ -45,4 +47,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - name: Run test with Node.js ${{ matrix.node-version }}
-        run: npm run test-node
+        id: test
+        run: |
+          echo "EXPIRED<<EOF"$'\n'"$(npm run test-node | grep 'expired' | cut -c 9-)"$'\n'"EOF" >> $GITHUB_OUTPUT
+      - name: Create Issue for Expired ZCAPs
+        if: ${{ steps.test.outputs.EXPIRED != '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ steps.test.outputs.EXPIRED }}
+        run: |
+          gh issue create --title "Expired ZCAPs detected" --body "${ISSUE_BODY}" --label "expired-zcaps"
