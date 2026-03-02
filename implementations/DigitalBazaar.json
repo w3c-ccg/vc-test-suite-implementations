@@ -22,6 +22,16 @@
   "didResolvers": [{
     "id": "",
     "endpoint": "https://qa.veresresolver.dev/1.0/identifiers/resolve",
-    "tags": ["did-key"]
+    "tags": ["did-key", "did-resolution"],
+    "supportedDids": {
+      "valid": [
+        {
+          "did": "did:key:z2J9gcGbsEDUmANXS8iJTVefK5t4eCx9x5k8jr8EyXWekTiEet6Jt6gwup2aWawzhHyMadvVMFcQ3ruwqg1Y8rYzjto1ccQu",
+          "resolutionOptions": {}
+        }
+      ],
+      "notFound": [],
+      "deactivated": []
+    }
   }]
 }
