@@ -4,7 +4,7 @@
   "didResolvers": [{
     "id": "https://www.privado.id",
     "endpoint": "https://resolver.privado.id/1.0/identifiers",
-    "tags": ["did-key", "did-resolution"],
+    "tags": ["did-resolution"],
     "supportedDids": {
       "valid": [
         {
