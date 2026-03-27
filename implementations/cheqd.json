@@ -22,10 +22,16 @@
           "resolutionOptions": {},
           "expectedError": "invalidDid"
         },
-         {
+        {
           "did": "did:cheqd:mainnet:8c5ed308-8695-41fe-9750-4c5b2a714cf",
           "resolutionOptions": {},
           "expectedError": "invalidDid"
+        }
+      ],
+      "deactivated": [
+        {
+          "did": "did:cheqd:testnet:4fb1cf4e-55bc-41d7-916a-14fad0c5ed77",
+          "resolutionOptions": {}
         }
       ]
     }
