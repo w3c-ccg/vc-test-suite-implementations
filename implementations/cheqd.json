@@ -1,0 +1,31 @@
+{
+  "name": "cheqd",
+  "implementation": "cheqd Resolver",
+  "didResolvers": [{
+    "id": "https://www.cheqd.io",
+    "endpoint": "https://resolver.cheqd.net/1.0/identifiers",
+    "tags": ["did-resolution"],
+    "supportedDids": {
+      "valid": [
+        {
+          "did": "did:cheqd:testnet:d76447b9-f925-42f1-8c7d-55f0a32cc669",
+          "resolutionOptions": {}
+        }
+      ],
+      [
+        {
+          "did": "did:cheqd:mainnet:8c5ed308-8695-41fe-9750-4c5b2a714cff",
+          "resolutionOptions": {}
+        }
+      ],
+      "notFound": [
+       {
+          "did": "did:cheqd:testnet:d76447b9-f925-42f1-8c7d-55f0a32cc66",
+          "resolutionOptions": {
+            "state": "0000000000000000000000000000000000000000000000000000000000000001"
+          }
+        }
+      ]
+    }
+  }]
+}
