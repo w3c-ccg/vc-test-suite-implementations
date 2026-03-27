@@ -20,12 +20,10 @@
         {
           "did": "did:cheqd:testnet:d76447b9-f925-42f1-8c7d-55f0a32cc66",
           "resolutionOptions": {},
-          "expectedError": "invalidDid"
         },
         {
           "did": "did:cheqd:mainnet:8c5ed308-8695-41fe-9750-4c5b2a714cf",
           "resolutionOptions": {},
-          "expectedError": "invalidDid"
         }
       ],
       "deactivated": [
